@@ -47,3 +47,8 @@
 .nav-bar a:hover{
     color: #f59f7e;
 }
+
+.header-cover{
+    height: 100%;
+    width: 100%;
+}

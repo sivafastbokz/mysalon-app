@@ -1,5 +1,7 @@
-import React from 'react';
+import React  from 'react';
 import HeaderReUse from '../reusecomponent/HeaderReUse';
+// import getHeaderImg from '../service/HeaderImg';
+import HeaderCover from '../assets/header-background-2.jpg';
 import '../style/header.css'
 
 
@@ -12,6 +14,22 @@ const links = [
 ]
 
 function Header(){
+  // const[image,setImage] =useState([]);
+  // console.log(image,'img')
+  // const getImg = async()=>{
+  //   try {
+  //     const response = await getHeaderImg();
+  //     console.log(response,'res')
+  //     setImage(response);
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
+
+  // useEffect(()=>{
+  //   getImg();
+  // },[])
+
     return(
         <>
        <div className='header'>
@@ -26,6 +44,9 @@ function Header(){
            </ul>
          </nav>
        </div>
+      <div >
+        <img src={HeaderCover} alt='Header-cover' className='header-cover'></img>
+      </div>
         </>
     )
 }

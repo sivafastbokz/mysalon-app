@@ -7,7 +7,7 @@
     background-color: #f8f9fa;
     height: 4.2rem;
     width: 100%;
-    position: fixed;
+    position: relative;
     display: flex;
     border-bottom: 3px solid #f59f7e
 }
@@ -15,7 +15,7 @@
 .brand-name{
     display: flex;
     align-items: center;
-    margin-left: 50px;
+    margin-left: 100px;
 }
 
 .nav-bar{
@@ -49,6 +49,14 @@
 }
 
 .header-cover{
-    height: 100%;
-    width: 100%;
+      width: 100%;
+    /* height: auto; */
+    /* max-height: 300px;  */
+}
+
+.logo{
+    height: 50px;
+    margin-top: 8px;
+    position: absolute;
+    margin-left: 40px;
 }

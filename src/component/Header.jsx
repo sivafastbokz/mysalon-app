@@ -1,13 +1,7 @@
 import React  from 'react';
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import HeaderReUse from '../reusecomponent/HeaderReUse';
-// import getHeaderImg from '../service/HeaderImg';
-import HeaderCover from '../assets/header-background-2.jpg';
-import HeaderCover2 from '../assets/header-background-1.jpg';
 import MySalonLogo from '../assets/beauty-salon_logo_96dp.png';
 import '../style/header.css'
-
 
 const links = [
     {href:'Home',label:'HOME'},
@@ -18,22 +12,6 @@ const links = [
 ]
 
 function Header(){
-  // const[image,setImage] =useState([]);
-  // console.log(image,'img')
-  // const getImg = async()=>{
-  //   try {
-  //     const response = await getHeaderImg();
-  //     console.log(response,'res')
-  //     setImage(response);
-  //   } catch (error) {
-  //     console.log(error)
-  //   }
-  // }
-
-  // useEffect(()=>{
-  //   getImg();
-  // },[])
-
     return(
         <>
        <div className='header'>
@@ -49,14 +27,13 @@ function Header(){
            </ul>
          </nav>
        </div>
-      <Carousel showArrows={true} autoPlay={true} infiniteLoop={true}>
-      <div >
-        <img src={HeaderCover} alt='Header-cover' className='header-cover'></img>
+      <div className='image'>
+       <h3 className='image-text'>
+           Fascinating than any <br/>
+             fashion salon
+        </h3>
+        <button className='btn-booknow'>Book Now</button>
       </div>
-      <div>
-        <img src={HeaderCover2} alt='Header-cover' className='header-cover' />
-      </div>
-      </Carousel>
         </>
     )
 }

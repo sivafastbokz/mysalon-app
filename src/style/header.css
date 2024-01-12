@@ -102,3 +102,48 @@
     background-color: #f59f7e;
     color: white;
 }
+
+.salon-intro{
+    text-align: center;
+    line-height: 48px;
+    padding: 100px 0;
+    background-color: #E9ECEF;
+}
+
+.salon-intro-h1{
+    text-align: center;
+    line-height: 48px;
+    color: #212529;
+    font-family: Yantramanav,sans-serif;
+    padding-top: 40px;
+    font-style: italic;
+}
+
+.salom-intro-heading{
+    color: #f59f7e;
+    font: syne,sans-serif;
+}
+
+.knowmore-btn{
+    margin-top: 50px;
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 10px 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    background-color: #E9ECEF;
+    text-align: center;
+    border-width: 1px;
+    color: #f59f7e;
+    border-color: #f59f7e;
+    cursor: pointer;
+}
+
+.knowmore-btn:hover{
+    background-color: #f59f7e;
+    /* border-color: #212529; */
+    color: white;
+}
+
+

@@ -14,3 +14,42 @@
     border-bottom: 4px solid #6C757D;
     padding-top: 15px;
 } 
+
+.card{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    left: 150px;
+    border: 2px solid black;
+    height: 400px;
+    width: 300px;
+    background-color: #f59f7e;
+    border-radius: 2px;
+}
+
+.container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.service-image{
+    position: absolute;
+    height: 300px;
+    width: 298px;
+}
+
+.service-p2{
+    position: absolute;
+    top: 320px;
+    left: 30px;
+}
+
+.service-p1{
+    position: absolute;
+    top: 300px;
+    left: 30px;
+}

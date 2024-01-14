@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import getServiceDetails from '../service/ServiceDetails';
+import ButttonReuse from './ButtonReUse'
 import '../style/service.css';
 
 function ServiceCard(){
@@ -8,6 +9,7 @@ function ServiceCard(){
    try {
     const response = await getServiceDetails()
     setServiceData(response.fetchService)
+    console.log(response.fetchService,'res')
    } catch (error) {
     console.log(error)
    }
@@ -23,8 +25,9 @@ function ServiceCard(){
         {serviceData.map((data)=>(
            <div className='card' key={data._id}>
            <img src={data.serviceImage} alt='service-img' className='service-image'></img>
-           <p className='service-p1'>{data.serviceName}</p>
-           <p className='service-p2'>{data.servicePrice}</p>
+           <p className='service-name'>{data.serviceName}</p>
+           <p className='service-price'>&#8377;{data.servicePrice}</p>
+            <ButttonReuse label='Get a session' className='serviceBooking-btn'/>
            </div>
         ))}
        </div>

@@ -15,41 +15,58 @@
     padding-top: 15px;
 } 
 
-.card{
-    position: absolute;
+.container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-    left: 150px;
+    padding: 40px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 2px solid black;
     height: 400px;
     width: 300px;
     background-color: #f59f7e;
     border-radius: 2px;
+    margin: 10px;
 }
 
-.container{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-.service-image{
-    position: absolute;
+.service-image {
     height: 300px;
     width: 298px;
 }
 
-.service-p2{
-    position: absolute;
-    top: 320px;
-    left: 30px;
+.service-price{
+    margin-top: 10px;
 }
 
-.service-p1{
-    position: absolute;
-    top: 300px;
-    left: 30px;
+.service-name,
+.service-price{
+    text-align: center;
+}
+
+.serviceBooking-btn{
+    margin-top: 10px;
+    border-radius: 50px;
+    font-size: 10px;
+    padding: 10px 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+.viewmoreservice-btn{
+    margin-top: 20px;
+    margin-left: 670px;
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 10px 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
 }

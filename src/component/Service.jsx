@@ -1,6 +1,7 @@
 import React from 'react';
 import HeadingTagReUse from '../reusecomponent/HeadingTagReUse';
 import ServiceCard from '../reusecomponent/ServiceCardReUse';
+import ButtonReUse from '../reusecomponent/ButtonReUse';
 import '../style/service.css'
 
 function Service(){
@@ -10,6 +11,7 @@ function Service(){
         <HeadingTagReUse className='service-heading' label=' The Services We Provide'/>
         {/* <div className='salon-underline'></div> */}
         <ServiceCard/>
+        <ButtonReUse label='View More' className='viewmoreservice-btn'/>
         </div>
         </>
     )

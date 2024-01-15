@@ -2,7 +2,7 @@ import React from 'react';
 import HeadingTagReUse from '../reusecomponent/HeadingTagReUse';
 import ServiceCard from '../reusecomponent/ServiceCardReUse';
 import ButtonReUse from '../reusecomponent/ButtonReUse';
-import '../style/service.css'
+import '../style/service.css';
 
 function Service(){
     return(

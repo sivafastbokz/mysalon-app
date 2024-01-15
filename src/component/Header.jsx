@@ -4,7 +4,7 @@ import ButtonReUse from '../reusecomponent/ButtonReUse';
 import HeadingTagReUse from '../reusecomponent/HeadingTagReUse';
 import MySalonLogo from '../assets/beauty-salon_logo_96dp.png';
 import Service from './Service';
-import '../style/header.css'
+import '../style/header.css';
 
 const links = [
     {href:'Home',label:'HOME'},
@@ -54,4 +54,5 @@ function Header(){
         </>
     )
 }
+
 export default Header;

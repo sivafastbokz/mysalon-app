@@ -61,8 +61,6 @@
     background-image:url('../assets/header-background-2.jpg');
     background-size: cover;
     height: 680px;
-    /* display: table;
-    background: rgba(8, 8, 8, 0.5);  */
 }
 
 .image-text{
@@ -142,7 +140,6 @@
 
 .knowmore-btn:hover{
     background-color: #f59f7e;
-    /* border-color: #212529; */
     color: white;
 }
 

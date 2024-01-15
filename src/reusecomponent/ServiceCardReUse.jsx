@@ -5,11 +5,11 @@ import '../style/service.css';
 
 function ServiceCard(){
   const[serviceData,setServiceData]=useState([]);
+ 
   const serviceDetails = async()=>{
    try {
     const response = await getServiceDetails()
     setServiceData(response.fetchService)
-    console.log(response.fetchService,'res')
    } catch (error) {
     console.log(error)
    }
@@ -34,4 +34,5 @@ function ServiceCard(){
         </>
     )
 }
+
 export default ServiceCard;

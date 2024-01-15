@@ -8,4 +8,5 @@ function MySalon(){
     </>
   )
 }
+
 export default MySalon;

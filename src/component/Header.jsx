@@ -2,6 +2,7 @@ import React  from 'react';
 import HeaderReUse from '../reusecomponent/HeaderReUse';
 import ButtonReUse from '../reusecomponent/ButtonReUse';
 import HeadingTagReUse from '../reusecomponent/HeadingTagReUse';
+import ImageTagReUse from '../reusecomponent/ImageTagReUse';
 import MySalonLogo from '../assets/beauty-salon_logo_96dp.png';
 import Service from './Service';
 import '../style/header.css';
@@ -23,7 +24,7 @@ function Header(){
     return(
         <>
        <div className='header'>
-        <img src={MySalonLogo} alt='MySalon-logo' className='logo'></img>
+        <ImageTagReUse src={MySalonLogo} alt='MySalon-logo' className='logo'/>
          <h2 className='brand-name'>MySolan</h2>
          <nav className='nav-bar'>
            <ul>

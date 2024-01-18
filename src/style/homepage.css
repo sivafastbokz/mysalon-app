@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* <---------- Header -----------> */
+
+.header{
+    background-color: #f8f9fa;
+    height: 4.2rem;
+    width: 100%;
+    position: relative;
+    display: flex;
+    border-bottom: 3px solid #f59f7e
+}
+
+.brand-name{
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.nav-bar{
+    display: flex;
+    text-align: right;
+    margin-left: 680px;
+
+}
+
+.nav-bar ul{
+    list-style-type: none;
+    display: inline-flex;
+    gap: 50px;
+}
+
+.nav-bar ul li {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color: #00000080;
+}
+
+.nav-bar a:hover{
+    color: #f59f7e;
+}
+
+.logo{
+    height: 50px;
+    margin-top: 8px;
+    position: absolute;
+    margin-left: 40px;
+}
+
+/* <---------- Header-cover-picture -----------> */
+
+.image{
+    position: relative;
+    width: 100%;
+    background-image:url('../assets/header-background-2.jpg');
+    background-size: cover;
+    height: 680px;
+}
+
+.image-text{
+    position: absolute;
+    z-index: 1;
+    bottom: 350px;
+    left: 500px;
+    color: #fff;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 2px;
+    font-size: 55px;
+    margin: 20px 0 20px 0;
+    text-align: center;
+    font-style: italic;
+}
+
+.btn-booknow{
+    position: absolute;
+    bottom: 310px;
+    left: 710px;
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 10px 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    background-color: transparent;
+    text-align: center;
+    border-width: 1px;
+    color: #f59f7e;
+    border-color: #f59f7e;
+    cursor: pointer;
+    background: rgba(8, 8, 8, 0.5)
+}
+
+.btn-booknow:hover{
+    background-color: #f59f7e;
+    color: white;
+}
+
+/* <---------- Salon-intro -----------> */
+
+.salon-intro{
+    text-align: center;
+    line-height: 48px;
+    padding: 100px 0;
+    background-color: #E9ECEF;
+}
+
+.salon-intro-h1{
+    text-align: center;
+    line-height: 48px;
+    color: #212529;
+    font-family: Yantramanav,sans-serif;
+    padding-top: 40px;
+    font-style: italic;
+}
+
+.salon-intro-heading{
+    color: #f59f7e;
+    font: syne,sans-serif;
+}
+
+.knowmore-btn{
+    margin-top: 50px;
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 10px 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    background-color: #E9ECEF;
+    text-align: center;
+    border-width: 1px;
+    color: #f59f7e;
+    border-color: #f59f7e;
+    cursor: pointer;
+}
+
+.knowmore-btn:hover{
+    background-color: #f59f7e;
+    color: white;
+}
+
+/* <---------- Service-section -----------> */
+
+.service-section{
+    padding: 100px 0;
+}
+
+.service-heading{
+    text-align: center;
+    color: #f59f7e;
+}
+
+.salon-underline{
+    width: 110px;
+    margin: 0 auto;
+    border-bottom: 4px solid #6C757D;
+    padding-top: 15px;
+} 
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    width: 300px;
+    background-color: #f59f7e;
+    border-radius: 4px;
+    margin: 10px;
+    /* box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12); */
+}
+
+.service-image {
+    height: 300px;
+    width: -webkit-fill-available;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.service-price{
+    margin-top: 10px;
+}
+
+.service-name,
+.service-price{
+    text-align: center;
+}
+
+.serviceBooking-btn{
+    margin-top: 10px;
+    border-radius: 50px;
+    font-size: 10px;
+    padding: 10px 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    border:none;
+    background: rgba(8, 8, 8, 0.5);
+    color:white;
+}
+
+.viewmoreservice-btn{
+    margin-top: 20px;
+    margin-left: 670px;
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 10px 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f59f7e;
+    border: 1px solid #f59f7e;
+    color: white;
+    cursor: pointer;
+}
+
+.viewmoreservice-btn:hover{
+    background-color: white;
+    color: #f59f7e;
+}
+
+
+/* <---------- Chic-creation-gallery -----------> */
+
+.customer-section{
+    margin-top: 60px;
+}
+
+.customer-heading{
+    text-align: center;
+    color: #f59f7e;
+}
+
+.customerimage-slider{
+    display: flex;
+    margin-top: 50px;
+}
+
+.marquee-items{
+    /* flex: 0 0 16vw; */
+    margin: 0 1vw;
+}
+
+.marquee-image{
+    display: block;
+    width: 100%;
+    height: 300px;
+}
+
+/* <---------- Testimonial-section -----------> */
+
+.testimonial-heading{
+    text-align: center;
+    color: #f59f7e;
+}
+
+.testimonial-container{
+    background-color:#E9ECEF;
+    padding: 100px 0;
+}
+
+.testimonial-item{
+    position: relative;
+    display: flex;
+    background-color: white;
+    height: 200px;
+    width: 500px;
+    border-radius: 5px;
+    left: 20px;
+    border-left: 4px solid #f59f7e;
+    top: 30px;
+}
+
+.testimonial-img{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 40px;
+    left: 10px;
+}
+
+.testimonial-dep{
+    position: absolute;
+    left: 100px;
+    top: 30px;
+    letter-spacing: 1px;
+}
+
+.testimonial-details{
+    position: absolute;
+    color: #f59f7e;
+    top: 160px;
+    left: 100px;
+}
+
+/* <---------- ContactUs-section -----------> */
+
+.contactus-container{
+    display: flex;
+    height: 400px;
+    width: 800px;
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12); 
+    margin: 0 auto;
+    background: #F3F6FD;
+    border-radius: 5px;
+    position: relative;
+    padding-left: 100px;
+}
+
+.contact-title{
+    position: absolute;
+    color: #f59f7e;
+    padding-top: 80px;
+    /* padding-left: 80px; */
+    font-family: sans-serif;
+}
+
+.contact-subtitle{
+    color: #212529;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* padding-left: 80px; */
+    padding-top: 110px;
+    position: absolute;
+}
+
+.contact-subtitle2{
+    padding-top: 160px;
+    position: absolute;
+    color: rgb(136, 131, 131);
+}
+
+.contact-line{
+    width: 600px;
+    position: absolute;
+    top: 200px;
+    border-color: azure;
+}

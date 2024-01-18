@@ -1,10 +1,10 @@
 import React from 'react';
-import Header from '../component/Header';
+import HomePage from '../component/HomePage';
 
 function MySalon(){
   return(
     <>
-    <Header/>
+    <HomePage/>
     </>
   )
 }

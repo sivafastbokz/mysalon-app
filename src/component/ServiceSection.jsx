@@ -20,8 +20,7 @@ import CustomerStyle13 from '../assets/images (1).jpeg';
 import CustomerStyle14 from '../assets/images (3).jpeg';
 import CustomerStyle15 from '../assets/trendingstyle.jpg';
 import CustomerStyle16 from '../assets/images (4).jpeg';
-import '../style/service.css';
-
+import '../style/homepage.css';
 
 const cutomerImages = [
     {url:CustomerStyle,className:'marquee-image'},
@@ -42,7 +41,13 @@ const cutomerImages = [
     {url:CustomerStyle16,className:'marquee-image'},
 ]
 
-function Service(){
+const customerReviews = [
+    {image:CustomerStyle4,depreciation:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ex tempore sunt repellendus commodi! Quis libero et nobis veritatis. Praesentium non corrupti architecto voluptatibus provident, reiciendis animi quisquam distinctio facere.',personalDetails:'Jackie Chan-china'},
+    //{image:CustomerStyle9,depreciation:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ex tempore sunt repellendus commodi! Quis libero et nobis veritatis. Praesentium non corrupti architecto voluptatibus provident, reiciendis animi quisquam distinctio facere.',personalDetails:'Megan Fox-USA'},
+    // {image:CustomerStyle8,depreciation:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ex tempore sunt repellendus commodi! Quis libero et nobis veritatis. Praesentium non corrupti architecto voluptatibus provident, reiciendis animi quisquam distinctio facere.',personalDetails:'leo-UK'}
+]
+
+function ServiceSection(){
     return(
         <>
         <div className='service-section'>
@@ -65,9 +70,21 @@ function Service(){
         </div>
         </Marquee>
         </div>
+        <div className='testimonial-container'>
+        <HeadingTagReUse className='testimonial-heading' label='Our happy customers say about us'/>
+        {/* <Marquee autoFill={true} play={false}> */}
+           {customerReviews.map((data)=>(
+            <div className='testimonial-item'>
+            <ImageTagReUse src={data.image} className='testimonial-img'/>
+            <p className='testimonial-dep'>{data.depreciation}</p>
+            <p className='testimonial-details'>{data.personalDetails}</p>
+            </div>
+           ))}
+        {/* </Marquee> */}
+        </div>
         </div>
         </>
     )
 }
 
-export default Service;
+export default ServiceSection;

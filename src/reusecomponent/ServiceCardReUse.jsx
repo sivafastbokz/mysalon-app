@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import getServiceDetails from '../service/ServiceDetails';
 import ButttonReuse from './ButtonReUse'
-import '../style/service.css';
+import '../style/homepage.css';
 
 function ServiceCard(){
   const[serviceData,setServiceData]=useState([]);

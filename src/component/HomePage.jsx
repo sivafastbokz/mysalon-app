@@ -1,9 +1,10 @@
 import React  from 'react';
 import ButtonReUse from '../reusecomponent/ButtonReUse';
 import HeadingTagReUse from '../reusecomponent/HeadingTagReUse';
-import ServiceSection from './ServiceSection';
 import Header from './Header';
+import ServiceSection from './ServiceSection';
 import ContactUsSection from './ContactUsSection';
+import Footer from './Footer';
 import '../style/homepage.css';
 
 const headingTagLabel = [
@@ -32,6 +33,7 @@ function HomePage(){
       </div>
       <ServiceSection/>
       <ContactUsSection/>
+      <Footer/>
         </>
     )
 }

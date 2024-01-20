@@ -9,9 +9,13 @@
     background-color: #f8f9fa;
     height: 4.2rem;
     width: 100%;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1024;
     display: flex;
-    border-bottom: 3px solid #f59f7e
+    border-bottom: 3px solid #f59f7e;
+    padding-left: 10rem;
+    padding-right: 10rem;
 }
 
 .brand-name{
@@ -23,7 +27,7 @@
 .nav-bar{
     display: flex;
     text-align: right;
-    margin-left: 680px;
+    margin-left: auto;
 
 }
 
@@ -319,12 +323,13 @@
     display: flex;
     justify-content: center;
     gap: 30px;
+    padding-bottom: 100px;
 }
 
 
 .contactus-container{
     display: flex;
-    height: 500px;
+    height: 550px;
     width: 900px;
     box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12); 
     /* margin: 0 auto; */
@@ -444,4 +449,129 @@
 
 .contact-experience ul li p{
     color: #f59f7e;
+}
+
+/* <---------- Footer-section -----------> */ 
+
+.footer{
+    background-color: #f8f9fa;
+    width: 100%;
+    height: 20rem;
+    line-height: 2;
+    display: flex;
+    width: 100%;
+    /* border-top: 3px solid #f59f7e; */
+    border-bottom:1px solid #f59f7e;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 30px;
+}
+
+.footer-container{
+    margin-top: 20px;
+}
+
+.footer-logo{
+    margin-left: 33px;
+}
+
+.footer-myslaon-name{
+    margin-left: 110px;
+    margin-top: -70px;
+}
+
+.footer-col-two{
+    margin-left: 100px;
+    margin-top: 25px;
+}
+
+.footer-col-heading{
+   color: #f59f7e;
+   font-family: sans-serif;
+   margin-left: 36px;
+}
+
+.footer-col-two ul li {
+    list-style-type: none;
+}
+
+.footer-col-two ul li a{
+    text-decoration: none;
+    color: #00000080;
+}
+
+.footer-col-two ul li a:hover{
+    color: #f59f7e;
+}
+
+.footer-col-three{
+    margin-left: 100px;
+    margin-top: 24px;
+}
+
+.footer-col-three-heading{
+    color: #f59f7e;
+    font-family: sans-serif;
+}
+
+.footer-col-three-subheading{
+    color: dimgray;
+}
+
+.footer-col-three-content{
+    color: #00000080;
+}
+
+.footer-address{
+    margin-left: 100px;
+    margin-top: 24px;
+}
+
+.footer-address-heading{
+    color: #f59f7e;
+    font-family: sans-serif;
+}
+
+.footer-address-content{
+    color: #00000080;
+}
+
+.social-media-heading{
+    margin-top: 30px;
+    margin-left: 55px;
+    color: dimgray;
+}
+
+.footer-container ul li {
+    list-style-type: none;
+}
+
+.footer-container ul {
+    display: inline-flex;
+    gap: 20px;
+    margin-left: 15px;
+}
+
+.footer-container ul li a i{
+    color: #00000080;
+}
+
+.footer-container ul li a i:hover{
+    color: #f59f7e;
+}
+
+
+.copyright{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    color: black;
+    font-weight: 400;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
 }

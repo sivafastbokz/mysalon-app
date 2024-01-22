@@ -1,5 +1,5 @@
 import React  from 'react';
-import HeaderReUse from '../reusecomponent/HeaderReUse';
+import NavMenuReUse from '../reusecomponent/NavMenuReUse';
 import ImageTagReUse from '../reusecomponent/ImageTagReUse';
 import MySalonLogo from '../assets/beauty-salon_logo_96dp.png';
 import '../style/homepage.css'
@@ -22,7 +22,7 @@ function Header(){
            <ul>
             {links.map((link)=>{
                 return(
-                   <HeaderReUse href={link.href} label={link.label}/>
+                   <NavMenuReUse href={link.href} label={link.label}/>
                 )
             })}
            </ul>

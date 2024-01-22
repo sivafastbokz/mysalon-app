@@ -1,7 +1,15 @@
 import React from 'react';
 import HeadingTagReUse from '../reusecomponent/HeadingTagReUse';
 import ButtonReUse from '../reusecomponent/ButtonReUse';
+import InputReUse from '../reusecomponent/InputReUse';
 import '../style/homepage.css';
+
+
+const inputAttributes = [
+    {className:'contact-name-input',placeholder:'Name',type:'text'},
+    {className:'contact-name-input',placeholder:'Phone Number',type:'number'},
+    {className:'contact-name-input',placeholder:'email',type:'email'}
+]
 
 function ContactUsSection(){
     return(
@@ -13,9 +21,9 @@ function ContactUsSection(){
          <p className='contact-subtitle2'>Fill out the form below, and we'll get back to you shortly!</p>
          <hr className='contact-line'/>
          <div className='contact-input-group'>
-         <input className='contact-name-input' placeholder='Name'type='text'/>
-         <input className='contact-name-input' placeholder='Phone Number'type='number'/>
-         <input className='contact-name-input' placeholder='email'type='email'/>
+        {inputAttributes.map((att)=>(
+           <InputReUse className={att.className} placeholder={att.placeholder} type={att.type}/>
+        ))}
          <textarea placeholder='Leave us a message...' spellCheck='false'className='contact-name-input'></textarea>
          <ButtonReUse label='Get started' className='contact-btn'/>
          </div>

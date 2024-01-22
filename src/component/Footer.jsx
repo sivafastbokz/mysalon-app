@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageTagReUse from '../reusecomponent/ImageTagReUse';
 import MySalonLogo from '../assets/beauty-salon_logo_96dp.png';
-import HeaderReUse from '../reusecomponent/HeaderReUse';
+import NavMenuReUse from '../reusecomponent/NavMenuReUse';
 import '../style/homepage.css';
 
 const services = [
@@ -36,7 +36,7 @@ function Footer(){
             <h3 className='social-media-heading'>Follow our work on</h3>
             <ul>
                 {socialMediaIcons.map((content)=>(
-                    <HeaderReUse href={content.href} label={content.label}/>
+                    <NavMenuReUse href={content.href} label={content.label}/>
                 ))}
             </ul>
           </div>
@@ -44,7 +44,7 @@ function Footer(){
            <h2 className='footer-col-heading'>Our Services</h2>
            <ul>
             {services.map((content)=>(
-                <HeaderReUse href={content.href} label={content.label}/>
+                <NavMenuReUse href={content.href} label={content.label}/>
             ))}
            </ul>
           </div>

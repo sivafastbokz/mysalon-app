@@ -1,7 +1,7 @@
 import React from 'react';
 
-function HeaderReUse({href,label}){
+function NavMenuReUse({href,label}){
     return <li><a href={href}>{label}</a></li>
 }
 
-export default HeaderReUse;
+export default NavMenuReUse;

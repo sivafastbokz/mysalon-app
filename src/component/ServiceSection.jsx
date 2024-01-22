@@ -43,7 +43,7 @@ const cutomerImages = [
 
 const customerReviews = [
     {image:CustomerStyle4,depreciation:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ex tempore sunt repellendus commodi! Quis libero et nobis veritatis. Praesentium non corrupti architecto voluptatibus provident, reiciendis animi quisquam distinctio facere.',personalDetails:'Jackie Chan-china'},
-    //{image:CustomerStyle9,depreciation:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ex tempore sunt repellendus commodi! Quis libero et nobis veritatis. Praesentium non corrupti architecto voluptatibus provident, reiciendis animi quisquam distinctio facere.',personalDetails:'Megan Fox-USA'},
+    // {image:CustomerStyle9,depreciation:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ex tempore sunt repellendus commodi! Quis libero et nobis veritatis. Praesentium non corrupti architecto voluptatibus provident, reiciendis animi quisquam distinctio facere.',personalDetails:'Megan Fox-USA'},
     // {image:CustomerStyle8,depreciation:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ex tempore sunt repellendus commodi! Quis libero et nobis veritatis. Praesentium non corrupti architecto voluptatibus provident, reiciendis animi quisquam distinctio facere.',personalDetails:'leo-UK'}
 ]
 
@@ -72,7 +72,6 @@ function ServiceSection(){
         </div>
         <div className='testimonial-container'>
         <HeadingTagReUse className='testimonial-heading' label='Our happy customers say about us'/>
-        {/* <Marquee autoFill={true} play={false}> */}
            {customerReviews.map((data)=>(
             <div className='testimonial-item'>
             <ImageTagReUse src={data.image} className='testimonial-img'/>
@@ -80,7 +79,6 @@ function ServiceSection(){
             <p className='testimonial-details'>{data.personalDetails}</p>
             </div>
            ))}
-        {/* </Marquee> */}
         </div>
         </div>
         </>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Marquee from 'react-fast-marquee';
 import HeadingTagReUse from '../reusecomponent/HeadingTagReUse';
-import ServiceCard from '../reusecomponent/ServiceCardReUse';
+// import ServiceCard from '../reusecomponent/ServiceCardReUse';
 import ButtonReUse from '../reusecomponent/ButtonReUse';
 import ImageTagReUse from '../reusecomponent/ImageTagReUse';
 import CustomerStyle from '../assets/customerstyle.jpg';
@@ -43,20 +43,36 @@ const cutomerImages = [
 
 const customerReviews = [
     {image:CustomerStyle4,depreciation:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ex tempore sunt repellendus commodi! Quis libero et nobis veritatis. Praesentium non corrupti architecto voluptatibus provident, reiciendis animi quisquam distinctio facere.',personalDetails:'Jackie Chan-china'},
-    // {image:CustomerStyle9,depreciation:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ex tempore sunt repellendus commodi! Quis libero et nobis veritatis. Praesentium non corrupti architecto voluptatibus provident, reiciendis animi quisquam distinctio facere.',personalDetails:'Megan Fox-USA'},
-    // {image:CustomerStyle8,depreciation:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ex tempore sunt repellendus commodi! Quis libero et nobis veritatis. Praesentium non corrupti architecto voluptatibus provident, reiciendis animi quisquam distinctio facere.',personalDetails:'leo-UK'}
+    {image:CustomerStyle9,depreciation:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ex tempore sunt repellendus commodi! Quis libero et nobis veritatis. Praesentium non corrupti architecto voluptatibus provident, reiciendis animi quisquam distinctio facere.',personalDetails:'Megan Fox-USA'},
+    {image:CustomerStyle8,depreciation:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ex tempore sunt repellendus commodi! Quis libero et nobis veritatis. Praesentium non corrupti architecto voluptatibus provident, reiciendis animi quisquam distinctio facere.',personalDetails:'Leonal Andre-UK'},
+    {image:CustomerStyle10,depreciation:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ex tempore sunt repellendus commodi! Quis libero et nobis veritatis. Praesentium non corrupti architecto voluptatibus provident, reiciendis animi quisquam distinctio facere.',personalDetails:'jennifer-UK'}
+
+]
+
+const serviceDep = [
+    {serviceTitle:'HAIR COLOUR', depreciation:'Hair color is a true expression of your individuality. Our expert stylists know how to bring your color to life like never before. Whether it’s a bold new look or a natural balayage you’re after, our colorists have the knowledge and experience to create your dream look.'},
+    {serviceTitle:'HAIRCUTS & STYLING', depreciation:'Your haircut should be a reflection of your personality, and should cater to your lifestyle. Our professional hair stylists in Brooklyn will design a look and styling routine that best suits your needs. Their recommendations will always be with your hair’s best interest in mind.'},
+    {serviceTitle:'SPECIALTY SERVICES', depreciation:'Sometimes you need a change, and we get that. Looking for something outside the scope of cuts, color and styling? Our hair specialists are certified in unique smoothing systems and hair extensions that can dramatically alter your look.'},
 ]
 
 function ServiceSection(){
     return(
         <>
         <div className='service-section'>
-        <HeadingTagReUse className='service-heading' label=' The Services We Provide'/>
-        {/* <div className='salon-underline'></div> */}
-        <ServiceCard/>
+        <HeadingTagReUse className='service-heading' label='Services'/>
+        <h3 className='service-section-subheading'>We Pride Ourselves On Quality</h3>
+        <div className='service-col-container'>
+        {serviceDep.map((content)=>(
+            <div className='service-col'>
+            <h3 className='service-col-title'>{content.serviceTitle}</h3>
+            <p className='service-col-dep'>{content.depreciation}</p>
+            </div>
+         ))}
+        </div>
+        {/* <ServiceCard/> */}
         <ButtonReUse label='View More' className='viewmoreservice-btn'/>
         <div className='customer-section'>
-        <HeadingTagReUse className='customer-heading' label='Chic Creations Gallery'/>
+        <HeadingTagReUse className='customer-heading' label='Check Out Our Clients'/>
         <Marquee 
         autoFill={true}
         speed={50}
@@ -70,8 +86,9 @@ function ServiceSection(){
         </div>
         </Marquee>
         </div>
-        <div className='testimonial-container'>
+        <div className='testimonial-section'>
         <HeadingTagReUse className='testimonial-heading' label='Our happy customers say about us'/>
+        <div className='testimonial-container'>
            {customerReviews.map((data)=>(
             <div className='testimonial-item'>
             <ImageTagReUse src={data.image} className='testimonial-img'/>
@@ -79,6 +96,7 @@ function ServiceSection(){
             <p className='testimonial-details'>{data.personalDetails}</p>
             </div>
            ))}
+        </div>
         </div>
         </div>
         </>

@@ -164,13 +164,6 @@
     color: #f59f7e;
 }
 
-.salon-underline{
-    width: 110px;
-    margin: 0 auto;
-    border-bottom: 4px solid #6C757D;
-    padding-top: 15px;
-} 
-
 .container{
     display: flex;
     justify-content: space-around;
@@ -221,7 +214,7 @@
 }
 
 .viewmoreservice-btn{
-    margin-top: 20px;
+    margin-top: 100px;
     margin-left: 670px;
     border-radius: 50px;
     font-size: 16px;
@@ -240,6 +233,42 @@
     color: #f59f7e;
 }
 
+.service-section-subheading{
+    text-align: center;
+    margin-top: 50px;
+    color: #00000080;
+}
+
+.service-col{
+    padding-left: 5rem;
+    padding-right: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-col-title{
+    text-transform: uppercase;
+    margin-top: 80px;
+    font-family: sans-serif;
+    color: #363636;
+}
+
+.service-col-dep{
+    margin-top: 30px;
+    font-family: Open Sans, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: none;
+    color: #333333;
+}
+
+.service-col-container{
+    display: flex;
+    justify-content: space-around;
+}
 
 /* <---------- Chic-creation-gallery -----------> */
 
@@ -270,6 +299,11 @@
 
 /* <---------- Testimonial-section -----------> */
 
+.testimonial-section{
+    background-color:#E9ECEF;
+    padding: 100px 0;
+}
+
 .testimonial-heading{
     text-align: center;
     color: #f59f7e;
@@ -277,19 +311,23 @@
 
 .testimonial-container{
     background-color:#E9ECEF;
-    padding: 100px 0;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .testimonial-item{
     position: relative;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: white;
-    height: 200px;
-    width: 500px;
+    height: 330px;
+    width: 300px;
     border-radius: 5px;
-    left: 20px;
     border-left: 4px solid #f59f7e;
-    top: 30px;
+    top: 65px;
 }
 
 .testimonial-img{
@@ -299,22 +337,19 @@
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    top: 40px;
-    left: 10px;
+    top: 20px;
 }
 
 .testimonial-dep{
     position: absolute;
-    left: 100px;
-    top: 30px;
-    letter-spacing: 1px;
+    left: 10px;
+    top: 150px;
 }
 
 .testimonial-details{
     position: absolute;
     color: #f59f7e;
-    top: 160px;
-    left: 100px;
+    top: 110px;
 }
 
 /* <---------- ContactUs-section -----------> */
@@ -332,7 +367,6 @@
     height: 550px;
     width: 900px;
     box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12); 
-    /* margin: 0 auto; */
     background: #F3F6FD;
     border-radius: 5px;
     position: relative;
@@ -343,14 +377,12 @@
     position: absolute;
     color: #f59f7e;
     padding-top: 80px;
-    /* padding-left: 80px; */
     font-family: sans-serif;
 }
 
 .contact-subtitle{
     color: #212529;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    /* padding-left: 80px; */
     padding-top: 110px;
     position: absolute;
 }
@@ -371,7 +403,6 @@
 .contact-input-group{
     position: absolute;
     top: 230px;
-    /* width: 100%; */
     display: flex;
     gap: 40px;
     flex-direction: row;
@@ -382,7 +413,6 @@
 }
 
 .contact-name-input{
-    /* position: absolute; */
     border: 1px solid rgb(16 24 40 / 20%);
     border-radius: 5px;
     padding: 7px 15px;
@@ -460,7 +490,6 @@
     line-height: 2;
     display: flex;
     width: 100%;
-    /* border-top: 3px solid #f59f7e; */
     border-bottom:1px solid #f59f7e;
     padding-left: 10rem;
     padding-right: 10rem;

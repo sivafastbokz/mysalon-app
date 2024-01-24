@@ -1,4 +1,5 @@
 import React  from 'react';
+import { useNavigate } from 'react-router-dom';
 import ButtonReUse from '../reusecomponent/ButtonReUse';
 import HeadingTagReUse from '../reusecomponent/HeadingTagReUse';
 import Header from './Header';
@@ -13,6 +14,13 @@ const headingTagLabel = [
 ]
 
 function HomePage(){
+  const navigate = useNavigate();
+
+    const servicePage = (event)=>{
+       event.preventDefault();
+       navigate('/mysalon/service')
+    }
+
     return(
         <>
       <Header/>
@@ -21,7 +29,7 @@ function HomePage(){
            Fascinating than any <br/>
              fashion salon
         </h3>
-        <ButtonReUse className='btn-booknow' label='Book Now'/>
+        <ButtonReUse className='btn-booknow' label='Book Now' onClick={servicePage}/>
       </div>
       <div className='salon-intro'>
        {headingTagLabel.map((tag)=>{

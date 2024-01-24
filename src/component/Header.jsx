@@ -4,12 +4,17 @@ import ImageTagReUse from '../reusecomponent/ImageTagReUse';
 import MySalonLogo from '../assets/beauty-salon_logo_96dp.png';
 import '../style/homepage.css'
 
+
+const preventReload = (event)=>{
+    event.preventDefault();
+}
+
 const links = [
-    {href:'Home',label:'HOME'},
-    {href:'Service',label:'SERVICE'},
-    {href:'Team',label:'TEAM'},
-    {href:'About',label:'ABOUT'},
-    {href:'Contact',label:'CONTACT'}
+    {href:'/mysalon',label:'HOME',nav:{preventReload}},
+    {href:'/mysalon/service',label:'SERVICE',nav:{preventReload}},
+    {href:'Team',label:'TEAM',nav:{preventReload}},
+    {href:'About',label:'ABOUT',nav:{preventReload}},
+    {href:'Contact',label:'CONTACT',nav:{preventReload}}
 ]
 
 function Header(){
@@ -22,7 +27,7 @@ function Header(){
            <ul>
             {links.map((link)=>{
                 return(
-                   <NavMenuReUse href={link.href} label={link.label}/>
+                   <NavMenuReUse href={link.href} label={link.label} onClick={link.nav.preventReload}/>
                 )
             })}
            </ul>

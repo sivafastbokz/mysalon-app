@@ -1,7 +1,7 @@
 import React from 'react';
 
-function ButtonReUse({className,label}){
-    return <button className={className}>{label}</button>
+function ButtonReUse({className,label,onClick}){
+    return <button className={className} onClick={onClick}>{label}</button>
 
 }
 

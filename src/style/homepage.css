@@ -284,11 +284,16 @@
 .customerimage-slider{
     display: flex;
     margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 3rem; */
+    /* padding-right: 3rem; */
 }
 
 .marquee-items{
-    /* flex: 0 0 16vw; */
-    margin: 0 1vw;
+    flex: 0 0 16vw;
+    /* margin: 0 1vw; */
 }
 
 .marquee-image{

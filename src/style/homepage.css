@@ -45,12 +45,16 @@
     font-weight: 700;
 }
 
-.nav-bar a{
+.header-nav{
     text-decoration: none;
     color: #00000080;
 }
 
-.nav-bar a:hover{
+.header-nav:hover{
+    color: #f59f7e;
+}
+
+.header-nav.active{
     color: #f59f7e;
 }
 

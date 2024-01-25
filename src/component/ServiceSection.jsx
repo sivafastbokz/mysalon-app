@@ -41,10 +41,10 @@ const cutomerImages = [
 ]
 
 const customerReviews = [
-    {image:CustomerStyle4,depreciation:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ex tempore sunt repellendus commodi! Quis libero et nobis veritatis. Praesentium non corrupti architecto voluptatibus provident, reiciendis animi quisquam distinctio facere.',personalDetails:'Jackie Chan-china'},
-    {image:CustomerStyle9,depreciation:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ex tempore sunt repellendus commodi! Quis libero et nobis veritatis. Praesentium non corrupti architecto voluptatibus provident, reiciendis animi quisquam distinctio facere.',personalDetails:'Megan Fox-USA'},
-    {image:CustomerStyle8,depreciation:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ex tempore sunt repellendus commodi! Quis libero et nobis veritatis. Praesentium non corrupti architecto voluptatibus provident, reiciendis animi quisquam distinctio facere.',personalDetails:'Leonal Andre-UK'},
-    {image:CustomerStyle10,depreciation:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ex tempore sunt repellendus commodi! Quis libero et nobis veritatis. Praesentium non corrupti architecto voluptatibus provident, reiciendis animi quisquam distinctio facere.',personalDetails:'jennifer-UK'}
+    {image:CustomerStyle4,depreciation:'I absolutely love the transformation I received at this salon! The stylists are incredibly talented and attentive. My new look has given me a boost of confidence. Can’t recommend them enough!',personalDetails:'Jackie Chan-china'},
+    {image:CustomerStyle9,depreciation:'Incredible experience! The staff is friendly, and the attention to detail is outstanding. I’m thrilled with my new hairstyle. Scarlett did an amazing job!',personalDetails:'Megan Fox-USA'},
+    {image:CustomerStyle8,depreciation:'Bruce and the team at this salon are fantastic! The atmosphere is relaxing, and the service is top-notch. I’m  beyond satisfied with my haircut and styling.',personalDetails:'Leonal Andre-UK'},
+    {image:CustomerStyle10,depreciation:'This salon exceeded my expectations. The stylist, Scarlett, understood exactly what I wanted, and the result is phenomenal. I’m  so happy with my new look!',personalDetails:'jennifer-UK'}
 ]
 
 const serviceDep = [

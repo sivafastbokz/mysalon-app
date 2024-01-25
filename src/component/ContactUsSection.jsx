@@ -16,7 +16,7 @@ function ContactUsSection(){
         <>
         <div className='contact-section'>
          <div className='contactus-container'>
-         <h5 className='contact-title'>CONTACT</h5>
+         <h5 className='contact-title' id='contactus'>CONTACT</h5>
          <HeadingTagReUse className='contact-subtitle' label='Have a question or need assistance?'/>
          <p className='contact-subtitle2'>Fill out the form below, and we'll get back to you shortly!</p>
          <hr className='contact-line'/>

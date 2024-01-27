@@ -24,7 +24,7 @@ function Header(){
         <>
         <div className='header'>
         <ImageTagReUse src={MySalonLogo} alt='MySalon-logo' className='logo'/>
-         <h2 className='brand-name'>MySolan</h2>
+         <h2 className='brand-name'>MySalon</h2>
          <nav className='nav-bar'>
            <ul>
             {links.map((link)=>{

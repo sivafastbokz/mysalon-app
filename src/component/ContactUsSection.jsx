@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import HeadingTagReUse from '../reusecomponent/HeadingTagReUse';
 import ButtonReUse from '../reusecomponent/ButtonReUse';
@@ -12,6 +12,7 @@ const inputAttributes = [
     {className:'contact-name-input',placeholder:'email',type:'email',name:'user_email'}
 ]
 function ContactUsSection(){
+    const[successMsg,setSuccessMsg]=useState(false);
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -19,7 +20,11 @@ function ContactUsSection(){
         emailjs.sendForm('service_wrmhvz3', 'template_4balais', form.current, 'k0CzpyikJBkRiUD4M')
           .then((result) => {
               console.log(result.text);
-              e.target.reset()
+              e.target.reset();
+              setSuccessMsg(!successMsg);
+              setTimeout(()=>{
+              setSuccessMsg(successMsg)
+              },1000)
           }, (error) => {
               console.log(error.text);
           });
@@ -59,6 +64,9 @@ function ContactUsSection(){
             </li>
          </ul>
          </div>
+        </div>
+        <div className={ successMsg ? 'success-msg show':'success-msg'}>
+            <p>Message Sent!</p>
         </div>
         </>
     )

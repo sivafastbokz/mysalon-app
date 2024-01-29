@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.signin-container{
+    padding: 20px;;
+    height: 420px;
+    width: 320px;
+    margin: 80px auto;
+}
+
+.signin-logo{
+    height: 45px;
+}
+
+.signin-title{
+    margin-top:10px;
+}
+
+.avatar-signin{
+    background-color: #1bbd7e;;
+}
+
+.signin-btn{
+    margin-top: 20px;
+    background-color: #f59f7e;
+}

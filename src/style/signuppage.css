@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.signup-container{
+    padding: 20px;;
+    height: 520px;
+    width: 320px;
+    margin: 80px auto;
+}
+
+.avatar{
+    background-color: #1bbd7e;
+}
+
+.signup-logo{
+    height: 45px;
+}
+
+.signup-title{
+    margin-top: 10px;
+}
+
+/* .input-field{
+    margin-top: 20px;
+} */
+
+.signup-btn{
+    margin-top: 20px;
+    background-color: #f59f7e;
+}

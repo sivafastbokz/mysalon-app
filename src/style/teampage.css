@@ -5,22 +5,22 @@
 
 /* <---------- Cover-picture -----------> */
 
-.service-cover-img{
+.team-cover-img{
     position: relative;
     width: 100%;
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/mysalon-5560b.appspot.com/o/servicepageimg.jpeg?alt=media&token=7e25ac2a-93f5-4f9b-a580-15fd5fd8fd23');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/mysalon-5560b.appspot.com/o/depositphotos_145573209-stock-photo-male-team-of-barbers-at.jpg?alt=media&token=0c8cb3c7-16b4-4841-950c-cfad212d2222');
     background-size: cover;
     height: 680px;
 }
 
-.service-cover-text{
+.team-cover-text{
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.service-image-text{
+.team-image-text{
     position: absolute;
     bottom: 300px;
     color: #fff;
@@ -31,7 +31,7 @@
     font-style: italic;
 }
 
-.service-image-subtext{
+.team-image-subtext{
     position: absolute;
     bottom: 250px;
     color: #fff;
@@ -42,21 +42,21 @@
     font-style: italic;
 }
 
-/* <---------- Service-intro -----------> */
+/* <---------- Team-intro -----------> */
 
-.service-intro{
+.team-intro{
     text-align: center;
     line-height: 48px;
     padding: 100px 0;
     background-color: #E9ECEF;
 }
 
-.service-intro-title{
+.team-intro-title{
     color: #f59f7e;
     font-family:sans-serif;
 }
 
-.service-intro-content{
+.team-intro-content{
     text-align: center;
     line-height: 48px;
     color: #212529;
@@ -65,10 +65,4 @@
     font-style: italic;
     padding-left: 5rem;
     padding-right: 5rem;
-}
-
-.service-intro-endtitle{
-    color: #f59f7e;
-    font-family:sans-serif;
-    margin-top: 50px;
 }

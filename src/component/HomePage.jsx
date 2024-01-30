@@ -20,7 +20,12 @@ function HomePage(){
        event.preventDefault();
        navigate('/mysalon/service')
     }
-
+    
+    const aboutUsPage = (event)=>{
+      event.preventDefault();
+      navigate('/mysalon/about')
+   }
+   
     return(
         <>
       <Header/>
@@ -37,7 +42,7 @@ function HomePage(){
           <HeadingTagReUse className={tag.className} label={tag.label} />
         )
        })}
-       <ButtonReUse className='knowmore-btn' label='Know More'/>
+       <ButtonReUse className='knowmore-btn' label='Know More' onClick={aboutUsPage}/>
       </div>
       <ServiceSection/>
       <ContactUsSection/>

@@ -5,22 +5,23 @@
 
 /* <---------- Cover-picture -----------> */
 
-.service-cover-img{
+.about-cover-img{
     position: relative;
     width: 100%;
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/mysalon-5560b.appspot.com/o/servicepageimg.jpeg?alt=media&token=7e25ac2a-93f5-4f9b-a580-15fd5fd8fd23');
-    background-size: cover;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/mysalon-5560b.appspot.com/o/istockphoto-1135396260-612x612.jpg?alt=media&token=db8fd71b-4bc8-46a8-bbdc-c01091496c2f');
     height: 680px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.service-cover-text{
+.about-cover-text{
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.service-image-text{
+.about-image-text{
     position: absolute;
     bottom: 300px;
     color: #fff;
@@ -31,7 +32,7 @@
     font-style: italic;
 }
 
-.service-image-subtext{
+.about-image-subtext{
     position: absolute;
     bottom: 250px;
     color: #fff;
@@ -42,21 +43,21 @@
     font-style: italic;
 }
 
-/* <---------- Service-intro -----------> */
+/* <---------- About-intro -----------> */
 
-.service-intro{
+.about-intro{
     text-align: center;
     line-height: 48px;
     padding: 100px 0;
     background-color: #E9ECEF;
 }
 
-.service-intro-title{
+.about-intro-title{
     color: #f59f7e;
     font-family:sans-serif;
 }
 
-.service-intro-content{
+.about-intro-content{
     text-align: center;
     line-height: 48px;
     color: #212529;
@@ -65,10 +66,4 @@
     font-style: italic;
     padding-left: 5rem;
     padding-right: 5rem;
-}
-
-.service-intro-endtitle{
-    color: #f59f7e;
-    font-family:sans-serif;
-    margin-top: 50px;
 }

@@ -45,6 +45,9 @@ const serviceDep = [
     {serviceTitle:'HAIR COLOUR', depreciation:'Hair color is a true expression of your individuality. Our expert stylists know how to bring your color to life like never before. Whether it’s a bold new look or a natural balayage you’re after, our colorists have the knowledge and experience to create your dream look.'},
     {serviceTitle:'HAIRCUTS & STYLING', depreciation:'Your haircut should be a reflection of your personality, and should cater to your lifestyle. Our professional hair stylists in Brooklyn will design a look and styling routine that best suits your needs. Their recommendations will always be with your hair’s best interest in mind.'},
     {serviceTitle:'SPECIALTY SERVICES', depreciation:'Sometimes you need a change, and we get that. Looking for something outside the scope of cuts, color and styling? Our hair specialists are certified in unique smoothing systems and hair extensions that can dramatically alter your look.'},
+    {serviceTitle:'BODY CARE', depreciation:'Your body is a canvas, and we’re here to pamper it. Experience the epitome of relaxation and rejuvenation with our luxurious body care services. From soothing massages to invigorating treatments, our skilled therapists will elevate your well-being to new heights. Let us sculpt and care for your body with the utmost precision and dedication.'},
+    {serviceTitle:'SKIN CARE', depreciation:'Unveil the beauty of your skin with our expert skincare services. Our skilled professionals are dedicated to enhancing your natural radiance through personalized treatments. Whether it’s a refreshing facial or a specialized regimen, we tailor our approach to meet your unique skincare needs. Step into a world of glowing skin and renewed confidence with our skincare expertise.'},
+    {serviceTitle:'BRIDAL', depreciation:'Your wedding day is a celebration of love and beauty, and we’re here to make it unforgettable. Our bridal services go beyond hairstyling – they capture the essence of your unique style and personality. Trust our skilled team to create timeless bridal elegance that reflects your vision. From pre-wedding preparations to the big day, let us be a part of your journey to bridal perfection.'},
 ]
 
 function ServiceSection(){
@@ -68,7 +71,7 @@ function ServiceSection(){
             </div>
          ))}
         </div>
-        <ButtonReUse label='View More' className='viewmoreservice-btn' onClick={servicePage}/>
+        <ButtonReUse label='Book Now' className='viewmoreservice-btn' onClick={servicePage}/>
         <div className='customer-section'>
         <HeadingTagReUse className='customer-heading' label='Check Out Our Clients'/>
         <div className='customerimage-slider'>

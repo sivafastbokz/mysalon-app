@@ -247,6 +247,7 @@
     padding-right: 5rem;
     display: flex;
     flex-direction: column;
+    flex: 1 1 380px;
 }
 
 .service-col-title{
@@ -271,6 +272,7 @@
 .service-col-container{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 /* <---------- Chic-creation-gallery -----------> */

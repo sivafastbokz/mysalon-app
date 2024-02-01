@@ -72,3 +72,38 @@
     font-family:sans-serif;
     margin-top: 50px;
 }
+
+.service-headings{
+    margin-top: 80px;
+    text-align: center;
+}
+
+.title{
+   color: #f59f7e;
+   font-family: sans-serif;
+}
+
+.subtitle{
+   margin-top: 30px;
+   color: #00000080;
+   font-family: sans-serif;
+}
+
+.servicepage-line{
+    margin: auto;
+    width: 95%;
+}
+
+.message-container{
+    margin-top: 30px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.message-content{
+    font-family: sans-serif;
+    color:#222222;
+    font-style: italic;
+}

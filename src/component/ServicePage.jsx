@@ -1,6 +1,8 @@
 import React from 'react';
 import HeadingTagReUse from '../reusecomponent/HeadingTagReUse';
 import Header from './Header';
+import ServiceCard from '../reusecomponent/ServiceCardReUse';
+import Footer from './Footer';
 import '../style/servicepage.css';
 
 function ServicePage(){
@@ -20,6 +22,16 @@ function ServicePage(){
             </h2>
             <HeadingTagReUse label='More Than a Salon. An Experience.' className='service-intro-endtitle'/>
         </div>
+        <div className='service-headings'>
+            <HeadingTagReUse className='title' label='What we do'/>
+            <h3 className='subtitle'>Fall in love with taking care of yourself</h3>
+        </div>
+        <ServiceCard/>
+        <hr className='servicepage-line'/>
+        <div className='message-container'>
+            <p className='message-content'>All prices are subject to change without notice.  Extra time and product may be needed depending on your needs and may be subject to extra charges. New clients, please arrive 15 minutes prior to your appointment to fill out appropriate forms. Please cancel appointments 24 hours in advance to avoid cancellation penalties. After ‘no shows’ you may be asked to pay for the service and keep a form of payment on file.  Thank you for choosing MySalon.</p>
+        </div>
+        <Footer/>
         </>
     )
 }

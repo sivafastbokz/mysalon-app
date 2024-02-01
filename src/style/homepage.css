@@ -35,6 +35,7 @@
     list-style-type: none;
     display: inline-flex;
     gap: 50px;
+    align-items: center;
 }
 
 .nav-bar ul li {
@@ -63,6 +64,23 @@
     margin-top: 8px;
     position: absolute;
     margin-left: 40px;
+}
+
+.header-signup-btn{
+    border: none;
+    background-color: #f59f7e;
+    color: white;
+    padding: 10px;
+    width: 100px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid #f59f7e;
+}
+
+.header-signup-btn:hover{
+    color: #f59f7e;
+    background-color: #f8f9fa;
 }
 
 /* <---------- Header-cover-picture -----------> */

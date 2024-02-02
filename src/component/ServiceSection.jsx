@@ -4,15 +4,15 @@ import HeadingTagReUse from '../reusecomponent/HeadingTagReUse';
 import ButtonReUse from '../reusecomponent/ButtonReUse';
 import ImageTagReUse from '../reusecomponent/ImageTagReUse';
 import CustomerStyle from '../assets/customerstyle.jpg';
-import CustomerStyle2 from '../assets/customerstyle2.jpg';
-import CustomerStyle3 from '../assets/customerstyle3.jpg';
+import CustomerStyle2 from '../assets/images (1).jpeg';
+import CustomerStyle3 from '../assets/images (5).jpeg';
 import CustomerStyle4 from '../assets/portfolio-6.jpg';
 import CustomerStyle5 from '../assets/portfolio-8.jpg';
 import CustomerStyle7 from '../assets/customerstyle5.jpg';
 import CustomerStyle8 from '../assets/customerstyle6.jpg';
-import CustomerStyle9 from '../assets/customerstyle7.jpg';
-import CustomerStyle10 from '../assets/modern-hairstyles-for-women.jpg';
-import CustomerStyle11 from '../assets/images.jpeg';
+import CustomerStyle9 from '../assets/images.jpeg';
+// import CustomerStyle10 from '../assets/modern-hairstyles-for-women.jpg';
+// import CustomerStyle11 from '../assets/images.jpeg';
 import CustomerStyle12 from '../assets/images (2).jpeg';
 import CustomerStyle14 from '../assets/images (3).jpeg';
 import CustomerStyle15 from '../assets/trendingstyle.jpg';
@@ -26,8 +26,8 @@ const cutomerImages = [
     {url:CustomerStyle4,className:'marquee-image'},
     {url:CustomerStyle5,className:'marquee-image'},
     {url:CustomerStyle7,className:'marquee-image'},
+    {url:CustomerStyle8,className:'marquee-image'},
     {url:CustomerStyle9,className:'marquee-image'},
-    {url:CustomerStyle11,className:'marquee-image'},
     {url:CustomerStyle12,className:'marquee-image'},
     {url:CustomerStyle14,className:'marquee-image'},
     {url:CustomerStyle15,className:'marquee-image'},
@@ -36,9 +36,9 @@ const cutomerImages = [
 
 const customerReviews = [
     {image:CustomerStyle4,depreciation:'I absolutely love the transformation I received at this salon! The stylists are incredibly talented and attentive. My new look has given me a boost of confidence. Can’t recommend them enough!',personalDetails:'Jackie Chan-china'},
-    {image:CustomerStyle9,depreciation:'Incredible experience! The staff is friendly, and the attention to detail is outstanding. I’m thrilled with my new hairstyle. Scarlett did an amazing job!',personalDetails:'Megan Fox-USA'},
+    {image:CustomerStyle12,depreciation:'Incredible experience! The staff is friendly, and the attention to detail is outstanding. I’m thrilled with my new hairstyle. Scarlett did an amazing job!',personalDetails:'John-USA'},
     {image:CustomerStyle8,depreciation:'Bruce and the team at this salon are fantastic! The atmosphere is relaxing, and the service is top-notch. I’m  beyond satisfied with my haircut and styling.',personalDetails:'Leonal Andre-UK'},
-    {image:CustomerStyle10,depreciation:'This salon exceeded my expectations. The stylist, Scarlett, understood exactly what I wanted, and the result is phenomenal. I’m  so happy with my new look!',personalDetails:'jennifer-UK'}
+    {image:CustomerStyle,depreciation:'This salon exceeded my expectations. The stylist, Scarlett, understood exactly what I wanted, and the result is phenomenal. I’m  so happy with my new look!',personalDetails:'Daniel-UK'}
 ]
 
 const serviceDep = [

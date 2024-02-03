@@ -5,6 +5,7 @@ import SignIn from '../container/SignIn';
 import Home from '../container/Home';
 import Service from '../container/Service';
 import About from '../container/About';
+import Appointment from '../container/Appointment';
 
 function Routers(){
     return(
@@ -16,6 +17,7 @@ function Routers(){
                 <Route path='/mysalon' element={<Home/>}></Route>
                 <Route path='/mysalon/service' element={<Service/>}></Route>
                 <Route path='/mysalon/about' element={<About/>}></Route>
+                <Route path='/mysalon/appointment' element={<Appointment/>}></Route>
             </Routes>
          </Router>
 

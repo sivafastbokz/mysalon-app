@@ -1,20 +1,50 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button, Grid,Paper,TextField,Typography,Link,IconButton,Input,InputLabel,InputAdornment,FormControl } from '@mui/material';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import LoginIcon from '@mui/icons-material/Login';
 import MySalonLogo from '../assets/beauty-salon_logo_96dp.png';
 import ImageTagReUse from '../reusecomponent/ImageTagReUse';
+import SignInApi from '../service/SignInApi';
 import '../style/signinpage.css';
 
 function SignInPage(){
     const [showPassword, setShowPassword] = useState(false);
-
+    const [email,setEmail] = useState('');
+    const [password,setPassword] = useState('');
+    const [error,setError] = useState('');
+    const [invalid,setInvalid] = useState('');
+    
+    const navigate = useNavigate();
     const handleClickShowPassword = () => setShowPassword((show) => !show);
 
     const handleMouseDownPassword = (event) => {
          event.preventDefault();
   };
+
+  const SignIn = async(event)=>{
+       event.preventDefault();
+       if(!email || !password){
+        setError('Fill The Required Fields');
+        return;
+    }
+       try {
+        const response = await SignInApi(email,password);
+        const { message,data } = response
+        if(message === 'signIn successfull'){
+          localStorage.setItem('token',data)
+          setTimeout(()=>{
+            navigate('/mysalon/service')
+          },1000)
+        }else{
+          setInvalid('Invalid Email or Password')
+        }
+       } catch (error) {
+         console.log(error)
+         setInvalid('Invalid Email or Password')
+       }
+  }
 
     return(
         <>
@@ -31,6 +61,7 @@ function SignInPage(){
               variant='standard' 
               type='email' 
               margin='normal'
+              onChange={(event)=>setEmail(event.target.value)}
               fullWidth 
               required 
               />
@@ -39,6 +70,7 @@ function SignInPage(){
                        <Input
                             type={showPassword ? 'text' : 'password'}
                             placeholder='Enter Your password'
+                            onChange={(event)=>setPassword(event.target.value)}
                             endAdornment={
                             <InputAdornment position="end">
                             <IconButton
@@ -52,6 +84,8 @@ function SignInPage(){
                      }
                   />
                 </FormControl>
+                {error && <p className='error-msg-signin'>{error}</p>}
+                {invalid &&  <p className='invalid'>{invalid}</p>}
               </Grid>
               <Button 
               type='submit' 
@@ -59,7 +93,8 @@ function SignInPage(){
               className='signin-btn' 
               style={{marginTop:'20px',backgroundColor:'#f59f7e'}}
               fullWidth 
-              startIcon={<LoginIcon/>}>Sign Up</Button>
+              startIcon={<LoginIcon/>}
+              onClick={SignIn}>Sign Up</Button>
               <Typography style={{marginTop:'10px'}}>
                 Don't have an account? <Link href='/mysalon/signup' style={{textDecoration:'none'}}>Sign Up</Link>
               </Typography>

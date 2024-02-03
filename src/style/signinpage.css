@@ -26,3 +26,21 @@
     margin-top: 20px;
     background-color: #f59f7e;
 }
+
+.error-msg-signin{
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+    background: antiquewhite;
+    border: 1px solid red;
+    padding: 10px;
+}
+
+.invalid{
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+    background: antiquewhite;
+    border: 1px solid red;
+    padding: 10px;
+}

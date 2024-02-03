@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import getServiceDetails from '../service/ServiceDetails';
 import ButttonReuse from './ButtonReUse'
 import '../style/homepage.css';
 
 function ServiceCard(){
   const[serviceData,setServiceData]=useState([]);
+  const navigate = useNavigate();
  
   const serviceDetails = async()=>{
    try {
@@ -19,6 +21,16 @@ function ServiceCard(){
    serviceDetails();
   },[])
 
+  const appointmentPage = (event)=>{
+    event.preventDefault();
+    const token = localStorage.getItem('token')
+    if(token === null){
+       navigate('/mysalon/signup')
+    }else{
+       navigate('/mysalon/appointment')
+    }
+  }
+
     return(
         <>
        <div className='container'>
@@ -27,7 +39,7 @@ function ServiceCard(){
            <img src={data.serviceImage} alt='service-img' className='service-image'></img>
            <p className='service-name'>{data.serviceName}</p>
            <p className='service-price'>&#8377;{data.servicePrice}</p>
-            <ButttonReuse label='Get a session' className='serviceBooking-btn'/>
+            <ButttonReuse label='Get a session' className='serviceBooking-btn' onClick={appointmentPage}/>
            </div>
         ))}
        </div>

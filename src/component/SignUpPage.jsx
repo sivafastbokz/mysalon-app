@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button, Grid,Paper,TextField,Typography,Link,IconButton,Input,InputLabel,InputAdornment,FormControl } from '@mui/material';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import LoginIcon from '@mui/icons-material/Login';
 import MySalonLogo from '../assets/beauty-salon_logo_96dp.png';
 import ImageTagReUse from '../reusecomponent/ImageTagReUse';
-// import SignUpApi from '../service/SignUpApi';
+import SignUpApi from '../service/SignUpApi';
 import '../style/signuppage.css';
 
 function SignUpPage(){
@@ -14,12 +15,31 @@ function SignUpPage(){
     const [email,setEmail] = useState('');
     const [phoneNumber,setPhoneNumber] = useState('');
     const [password,setPassword] = useState('');
-
+    const [error,setError] = useState('');
+    const [emailError,setEmailError] = useState('');
+    
+    const navigate = useNavigate();
     const handleClickShowPassword = () => setShowPassword((show) => !show);
 
-    const CreateAccount = (event)=>{
+    const CreateAccount = async(event)=>{
         event.preventDefault();
-        console.log(name,email,phoneNumber,password)
+        if(!name || !email || !phoneNumber || !password){
+          setError('Fill The Required Fields')
+          return;
+      }
+       if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)){
+        setEmailError('Enter a valid email');
+        return;
+      }
+      try {
+        await SignUpApi(name,email,phoneNumber,password)
+        setTimeout(()=>{
+          navigate('/mysalon/signin')
+        },1000)
+      } catch (error) {
+        console.log(error)
+      }
+        
     }
     return(
         <>
@@ -49,6 +69,8 @@ function SignUpPage(){
               margin='normal'
               name='email'
               onChange={(event)=>setEmail(event.target.value)}
+              error={emailError}
+              helperText={emailError}
               fullWidth 
               required 
               />
@@ -59,7 +81,7 @@ function SignUpPage(){
               type='number' 
               margin='normal'
               name='phoneNumber'
-              onChange={(event)=>setPhoneNumber(event.target.value)}
+              onChange={(event)=>setPhoneNumber(parseInt(event.target.value,10))}
               fullWidth 
               required 
               />
@@ -82,6 +104,7 @@ function SignUpPage(){
                      }
                   />
                 </FormControl>
+                {error &&<p className='error-msg'>{error}</p>}
               </Grid>
               <Button 
               type='submit' 

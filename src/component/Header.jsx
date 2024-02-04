@@ -1,4 +1,4 @@
-import React  from 'react';
+import React, { useEffect, useState }  from 'react';
 import { useLocation,useNavigate } from 'react-router-dom';
 import NavMenuReUse from '../reusecomponent/NavMenuReUse';
 import ImageTagReUse from '../reusecomponent/ImageTagReUse';
@@ -7,6 +7,7 @@ import MySalonLogo from '../assets/beauty-salon_logo_96dp.png';
 import '../style/homepage.css'
 
 function Header(){
+    const [data,setData] = useState('');
     const preventReload = (event)=>{
         event.preventDefault();
     }
@@ -18,6 +19,17 @@ function Header(){
         event.preventDefault();
         navigate('/mysalon/signup')
     }
+
+    const myAccountPage = (event)=>{
+         event.preventDefault();
+         navigate('/mysalon/myaccount')
+    }
+    
+    useEffect(()=>{
+        const token = sessionStorage.getItem('token')
+        setData(!token)
+    },[])
+    
     
     const links = [
         {href:'/mysalon',label:'HOME',nav:{preventReload},className:`header-nav ${loction.pathname === '/mysalon' ? 'active':''}`},
@@ -38,7 +50,8 @@ function Header(){
                    <NavMenuReUse href={link.href} label={link.label} className={link.className}/>
                 )
             })}
-            <ButtonReUse className='header-signup-btn' label='Sign Up' onClick={signUpPage}/>
+            {data ? <ButtonReUse className='header-signup-btn' label='Sign Up' onClick={signUpPage}/> 
+            : <ButtonReUse className='myaccount-btn' label='MyAccount' onClick={myAccountPage}/> }
            </ul>
          </nav>
        </div>

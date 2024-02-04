@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Grid,Paper,TextField,Typography,Link,IconButton,Input,InputLabel,InputAdornment,FormControl } from '@mui/material';
+import Alert from '@mui/material/Alert';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import LoginIcon from '@mui/icons-material/Login';
@@ -15,6 +16,7 @@ function SignInPage(){
     const [password,setPassword] = useState('');
     const [error,setError] = useState('');
     const [invalid,setInvalid] = useState('');
+    const [successMsg,setSuccessMsg]= useState(false);
     
     const navigate = useNavigate();
     const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -33,7 +35,8 @@ function SignInPage(){
         const response = await SignInApi(email,password);
         const { message,data } = response
         if(message === 'signIn successfull'){
-          localStorage.setItem('token',data)
+          sessionStorage.setItem('token',data)
+          setSuccessMsg(!successMsg)
           setTimeout(()=>{
             navigate('/mysalon/service')
           },1000)
@@ -48,6 +51,10 @@ function SignInPage(){
 
     return(
         <>
+        {successMsg ? 
+        <Alert variant='filled' severity='success' style={{width:'30%',margin:'auto',marginTop:'20px'}}>
+         Login Successfull</Alert>
+        : ''}
          <Grid>
             <Paper elevation={3}  className='signin-container'>
               <Grid align='center'>

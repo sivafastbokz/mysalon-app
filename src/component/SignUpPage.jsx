@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Grid,Paper,TextField,Typography,Link,IconButton,Input,InputLabel,InputAdornment,FormControl } from '@mui/material';
+import Alert from '@mui/material/Alert';
+// import Collapse from '@mui/material/Collapse';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import LoginIcon from '@mui/icons-material/Login';
@@ -17,6 +19,7 @@ function SignUpPage(){
     const [password,setPassword] = useState('');
     const [error,setError] = useState('');
     const [emailError,setEmailError] = useState('');
+    const [successMsg,setSuccessMsg]= useState(false);
     
     const navigate = useNavigate();
     const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -33,6 +36,7 @@ function SignUpPage(){
       }
       try {
         await SignUpApi(name,email,phoneNumber,password)
+        setSuccessMsg(!successMsg)
         setTimeout(()=>{
           navigate('/mysalon/signin')
         },1000)
@@ -43,6 +47,11 @@ function SignUpPage(){
     }
     return(
         <>
+        {successMsg ? 
+
+           <Alert variant='filled' severity='success' style={{width:'30%',margin:'auto',marginTop:'20px'}}>
+            Account Created</Alert>
+         : ''}
          <Grid>
             <Paper elevation={3}  className='signup-container'>
               <Grid align='center'>

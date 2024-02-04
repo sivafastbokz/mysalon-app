@@ -6,6 +6,7 @@ import Home from '../container/Home';
 import Service from '../container/Service';
 import About from '../container/About';
 import Appointment from '../container/Appointment';
+import MyAccount from '../container/MyAccount';
 
 function Routers(){
     return(
@@ -18,6 +19,7 @@ function Routers(){
                 <Route path='/mysalon/service' element={<Service/>}></Route>
                 <Route path='/mysalon/about' element={<About/>}></Route>
                 <Route path='/mysalon/appointment' element={<Appointment/>}></Route>
+                <Route path='/mysalon/myaccount' element={<MyAccount/>}></Route>
             </Routes>
          </Router>
 

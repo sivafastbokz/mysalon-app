@@ -23,7 +23,7 @@ function ServiceCard(){
 
   const appointmentPage = (event)=>{
     event.preventDefault();
-    const token = localStorage.getItem('token')
+    const token = sessionStorage.getItem('token')
     if(token === null){
        navigate('/mysalon/signup')
     }else{

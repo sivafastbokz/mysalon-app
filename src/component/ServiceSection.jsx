@@ -11,8 +11,6 @@ import CustomerStyle5 from '../assets/portfolio-8.jpg';
 import CustomerStyle7 from '../assets/customerstyle5.jpg';
 import CustomerStyle8 from '../assets/customerstyle6.jpg';
 import CustomerStyle9 from '../assets/images.jpeg';
-// import CustomerStyle10 from '../assets/modern-hairstyles-for-women.jpg';
-// import CustomerStyle11 from '../assets/images.jpeg';
 import CustomerStyle12 from '../assets/images (2).jpeg';
 import CustomerStyle14 from '../assets/images (3).jpeg';
 import CustomerStyle15 from '../assets/trendingstyle.jpg';

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AppointmentPage(){
+function DashboardPage(){
     return(
         <>
 
@@ -8,4 +8,4 @@ function AppointmentPage(){
     )
 }
 
-export default AppointmentPage;
+export default DashboardPage;

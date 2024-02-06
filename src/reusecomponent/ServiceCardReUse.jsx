@@ -27,7 +27,7 @@ function ServiceCard(){
     if(token === null){
        navigate('/mysalon/signup')
     }else{
-       navigate('/mysalon/appointment')
+       navigate('/mysalon/bookings')
     }
   }
 

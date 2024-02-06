@@ -14,17 +14,7 @@ function Header(){
     
     const loction = useLocation();
     const navigate = useNavigate();
-
-    const signUpPage = (event)=>{
-        event.preventDefault();
-        navigate('/mysalon/signup')
-    }
-
-    const myAccountPage = (event)=>{
-         event.preventDefault();
-         navigate('/mysalon/myaccount')
-    }
-    
+  
     useEffect(()=>{
         const token = sessionStorage.getItem('token')
         setData(!token)
@@ -50,8 +40,8 @@ function Header(){
                    <NavMenuReUse href={link.href} label={link.label} className={link.className}/>
                 )
             })}
-            {data ? <ButtonReUse className='header-signup-btn' label='Sign Up' onClick={signUpPage}/> 
-            : <ButtonReUse className='myaccount-btn' label='MyAccount' onClick={myAccountPage}/> }
+            {data ? <ButtonReUse className='header-signup-btn' label='Sign Up' onClick={()=>navigate('/mysalon/signup')}/> 
+            : <ButtonReUse className='myaccount-btn' label='MyAccount' onClick={()=>navigate('/mysalon/myaccount')}/> }
            </ul>
          </nav>
        </div>

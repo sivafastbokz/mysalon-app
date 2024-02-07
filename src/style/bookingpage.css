@@ -1,0 +1,68 @@
+.booking-heading{
+    font-size: xxx-large;
+    text-align: center;
+    margin-top: 150px;
+    color: #C2AA6C;
+    font-family: sans-serif;
+}
+
+.booking-details{
+    margin-top: 80px;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.details{
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.cancelling-policies{
+    margin-top: 50px;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.cancelling-policies-title{
+   font-family: sans-serif;
+   color: #f59f7e;
+}
+
+.cancelling-policies-subtitle{
+    margin-top: 30px;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.cancelling-policies ul{
+    margin-top: 30px;
+    padding: 0
+}
+
+.cancelling-policies ul li{
+    font-family: sans-serif;
+    padding: 5px;
+}
+
+.cancelling-policies-endtitle{
+    margin-top: 20px;
+    font-family: sans-serif;
+}
+
+.booking-container{
+    margin-top: 80px;
+}
+
+.booking-container-title{
+    font-family: sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: #f59f7e;
+}
+
+.booking-input{
+    padding: 20px;
+    max-height: 535px;
+    width: 520px;
+    margin: 80px auto;
+}

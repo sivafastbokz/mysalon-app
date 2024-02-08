@@ -66,3 +66,12 @@
     width: 520px;
     margin: 80px auto;
 }
+
+.error-msg-booking{
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+    background: antiquewhite;
+    border: 1px solid red;
+    padding: 10px;
+}

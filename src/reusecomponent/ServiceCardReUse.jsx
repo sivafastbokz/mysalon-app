@@ -5,7 +5,7 @@ import ButttonReuse from './ButtonReUse'
 import '../style/homepage.css';
 
 function ServiceCard(){
-  const[serviceData,setServiceData]=useState([]);
+  const [serviceData,setServiceData] = useState([]);
   const navigate = useNavigate();
  
   const serviceDetails = async()=>{

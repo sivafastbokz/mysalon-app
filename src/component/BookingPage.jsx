@@ -1,10 +1,11 @@
-import React from 'react';
-import { TextField,Paper,Grid,Button } from '@mui/material';
+import React,{ useState, useEffect } from 'react';
+import { TextField,Paper,Grid,Button,Select,MenuItem, InputLabel, FormControl } from '@mui/material';
+import getServiceDetails from '../service/ServiceDetails';
+import BookingApi from '../service/BookingApi';
 import HeadingTagReUse from '../reusecomponent/HeadingTagReUse';
 import Header from './Header';
 import Footer from './Footer';
 import '../style/bookingpage.css';
-
 
 const cancellationLabel = [
     {label:'Salon understands that sometimes schedules change and therefore requests at least 24 hours notice when canceling or rescheduling your appointment.'},
@@ -15,10 +16,50 @@ const cancellationLabel = [
     {label:'Please give a gratuity to the technician in cash. 15% or more is recommended.'},
 ]
 
-
 function BookingPage(){
+    const [serviceData,setServiceData] = useState([]);
+    const [bookingName,setBookingName] = useState('');
+    const [bookingDate,setBookingDate] = useState('');
+    const [bookingTime,setBookingTime] = useState('');
+    const [error,setError] = useState('');
+    // const [successMsg,setSuccessMsg]= useState(false);
+
+    const serviceDetails = async()=>{
+        try {
+         const response = await getServiceDetails()
+         setServiceData(response.fetchService)
+         if (response.fetchService.length > 0) {
+            setBookingName(response.fetchService[0].serviceName);
+        }
+        } catch (error) {
+         console.log(error)
+        }
+       }
+     
+       useEffect(()=>{
+        serviceDetails();
+       },[])
+    
+    const createBooking = async(event)=>{
+       event.preventDefault()
+       if(!bookingName || !bookingDate || !bookingTime){
+        setError('Fill The Required Fields')
+        return;
+    }
+       try {
+          await BookingApi(bookingName,bookingDate,bookingTime)
+        //   setSuccessMsg(!successMsg)
+       } catch (error) {
+         console.log(error)
+       }
+    }
+
     return(
         <>
+        {/* {successMsg ? 
+        <Alert variant='filled' severity='success' style={{width:'30%',margin:'auto',marginTop:'20px'}}>
+         Account Created</Alert>
+         : ''} */}
         <Header/>
         <HeadingTagReUse className='booking-heading' label='SERIVCE RESERVATION'/>
         <div className='booking-details'>
@@ -40,22 +81,30 @@ function BookingPage(){
          <HeadingTagReUse className='booking-container-title' label='Online Booking'/>
          <Paper elevation={3} className='booking-input'>
            <Grid alignItems='center'>
-             <TextField
-              variant='outlined'
-              type='text'
-              label='What would you like to have'
-              placeholder='Haircut'
-              size='normal'
-              margin='normal'
-              required
-              fullWidth
-             />
+            <FormControl fullWidth required>
+            <InputLabel>What would you like to have</InputLabel>
+             <Select 
+             variant='outlined' 
+             label='What would you like to have' 
+             size='normal' 
+             margin='normal' 
+             value={bookingName}
+             onChange={(event)=>setBookingName(event.target.value)}>
+               {serviceData.map((data)=>(
+                <MenuItem value={data.serviceName}>{data.serviceName}</MenuItem>
+               ))}
+             </Select>
+            </FormControl>
              <TextField
               variant='outlined'
               type='date'
               label='Prefered Date'
               size='normal'
               margin='normal'
+              onChange={(event)=>setBookingDate(event.target.value)}
+              InputLabelProps={{
+                shrink: true,
+              }}
               required
               fullWidth
              />
@@ -65,14 +114,20 @@ function BookingPage(){
               label='Prefered Time'
               size='normal'
               margin='normal'
+              onChange={(event)=>setBookingTime(event.target.value)}
+              InputLabelProps={{
+                shrink: true,
+              }}
               required
               fullWidth
              />
+             {error &&<p className='error-msg-booking'>{error}</p>}
              <Button
              type='submit' 
              variant='contained' 
              style={{marginTop:'20px',backgroundColor:'#f59f7e'}}
              fullWidth
+             onClick={createBooking}
              >BOOK NOW</Button>
            </Grid>
          </Paper>

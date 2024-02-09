@@ -22,7 +22,7 @@ function BookingPage(){
     const [bookingDate,setBookingDate] = useState('');
     const [bookingTime,setBookingTime] = useState('');
     const [error,setError] = useState('');
-    // const [successMsg,setSuccessMsg]= useState(false);
+    const [successMsg,setSuccessMsg]= useState(false);
 
     const serviceDetails = async()=>{
         try {
@@ -48,7 +48,14 @@ function BookingPage(){
     }
        try {
           await BookingApi(bookingName,bookingDate,bookingTime)
-        //   setSuccessMsg(!successMsg)
+          // event.target.reset();
+          setSuccessMsg(!successMsg);
+          setTimeout(()=>{
+          setSuccessMsg(successMsg)
+          },2000)
+          setBookingName('');
+          setBookingDate('');
+          setBookingTime('');
        } catch (error) {
          console.log(error)
        }
@@ -56,10 +63,6 @@ function BookingPage(){
 
     return(
         <>
-        {/* {successMsg ? 
-        <Alert variant='filled' severity='success' style={{width:'30%',margin:'auto',marginTop:'20px'}}>
-         Account Created</Alert>
-         : ''} */}
         <Header/>
         <HeadingTagReUse className='booking-heading' label='SERIVCE RESERVATION'/>
         <div className='booking-details'>
@@ -133,6 +136,9 @@ function BookingPage(){
          </Paper>
         </div>
         <Footer/>
+        <div className={ successMsg ? 'booking-msg show':'booking-msg'}>
+            <p>Appointment Booked Successfully!</p>
+        </div>
         </>
     )
 }

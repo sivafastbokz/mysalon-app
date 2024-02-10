@@ -1,0 +1,25 @@
+.sidebar{
+    width: 250px;
+    height: 100%;
+    background: #F3F6FD;
+    /* border-right: 2px solid #ececec; */
+    top: 0;
+    left: 0;
+    position: fixed;
+    padding-top: 20px;
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12); 
+}
+
+.mysalon-logo{
+    margin-left: 80px;
+}
+
+.mysalon-title{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.sidebar-line{
+    margin-top: 30px;
+    border-color: azure;
+}

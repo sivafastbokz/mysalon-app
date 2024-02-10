@@ -41,7 +41,7 @@ function Header(){
                 )
             })}
             {data ? <ButtonReUse className='header-signup-btn' label='Sign Up' onClick={()=>navigate('/mysalon/signup')}/> 
-            : <ButtonReUse className='myaccount-btn' label='MyAccount' onClick={()=>navigate('/mysalon/myaccount')}/> }
+            : <ButtonReUse className='myaccount-btn' label='My Account' onClick={()=>navigate('/mysalon/myaccount')}/> }
            </ul>
          </nav>
        </div>

@@ -48,7 +48,6 @@ function BookingPage(){
     }
        try {
           await BookingApi(bookingName,bookingDate,bookingTime)
-          // event.target.reset();
           setSuccessMsg(!successMsg);
           setTimeout(()=>{
           setSuccessMsg(successMsg)

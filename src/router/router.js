@@ -6,7 +6,6 @@ import Home from '../container/Home';
 import Service from '../container/Service';
 import About from '../container/About';
 import Booking from '../container/Booking';
-import MyAccount from '../container/MyAccount';
 import Dashboard from '../container/Dashboard';
 
 function Routers(){
@@ -20,7 +19,6 @@ function Routers(){
                 <Route path='/mysalon/service' element={<Service/>}></Route>
                 <Route path='/mysalon/about' element={<About/>}></Route>
                 <Route path='/mysalon/bookings' element={<Booking/>}></Route>
-                <Route path='/mysalon/myaccount' element={<MyAccount/>}></Route>
                 <Route path='/mysalon/dashboard' element={<Dashboard/>}></Route>
             </Routes>
          </Router>

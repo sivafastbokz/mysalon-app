@@ -1,8 +1,8 @@
-.sidebar{
+/* .sidebar{
     width: 250px;
     height: 100%;
     background: #F3F6FD;
-    /* border-right: 2px solid #ececec; */
+    border-right: 2px solid #ececec;
     top: 0;
     left: 0;
     position: fixed;
@@ -22,4 +22,11 @@
 .sidebar-line{
     margin-top: 30px;
     border-color: azure;
+} */
+
+.mysalon-logo{
+    height: 50px;
+    margin-top: 8px;
+    /* position: absolute; */
+    margin-left: 40px;
 }

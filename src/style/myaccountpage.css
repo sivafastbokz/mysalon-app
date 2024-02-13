@@ -24,9 +24,9 @@
     border-color: azure;
 } */
 
-.mysalon-logo{
-    height: 50px;
-    margin-top: 8px;
-    /* position: absolute; */
-    margin-left: 40px;
+.data-table{
+    height: 400px;
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
 }

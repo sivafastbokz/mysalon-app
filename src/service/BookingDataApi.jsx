@@ -1,4 +1,4 @@
-import axiosClient from '../helper/axiosClient';
+import axiosClient from '../helper/AxiosClient';
 
 const bookingDataApi = async()=>{
     const token = sessionStorage.getItem('token')

@@ -48,7 +48,6 @@ function SignUpPage(){
     return(
         <>
         {successMsg ? 
-
            <Alert variant='filled' severity='success' style={{width:'30%',margin:'auto',marginTop:'20px'}}>
             Account Created</Alert>
          : ''}

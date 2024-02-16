@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import bookingDataApi from '../service/BookingDataApi';
+import HeadingTagReuse from '../reusecomponent/HeadingTagReUse';
 import Header from './Header';
+import Footer from './Footer';
 import '../style/dashboardpage.css';
 
 const columns = [
@@ -32,6 +34,9 @@ function DashboardPage(){
     return(
         <>
         <Header/>
+        <div className='dashboard-title'>
+          <HeadingTagReuse label='Appointment History' className='dashboard-title-h1'/>
+        </div>
         <div className='data-table'>
       <DataGrid
         rows={serviceData}
@@ -46,6 +51,7 @@ function DashboardPage(){
         checkboxSelection
       />
     </div>
+    <Footer/>
         </>
     )
 }

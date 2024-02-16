@@ -20,7 +20,6 @@ function Header(){
         setData(!token)
     },[])
     
-    
     const links = [
         {href:'/mysalon',label:'HOME',nav:{preventReload},className:`header-nav ${loction.pathname === '/mysalon' ? 'active':''}`},
         {href:'/mysalon/service',label:'SERVICE',nav:{preventReload},className:`header-nav ${loction.pathname === '/mysalon/service' ? 'active':''}`},

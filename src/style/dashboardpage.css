@@ -15,3 +15,10 @@
     font-family: sans-serif;
     color: #f59f7e;
 }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .dashboard-title{
+        margin-left: 10px;
+        text-align: center;
+    }
+}

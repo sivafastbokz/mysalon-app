@@ -8,6 +8,7 @@ import '../style/homepage.css'
 
 function Header(){
     const [data,setData] = useState('');
+    const [showNavBar,setShowNavBar]= useState(false);
     const preventReload = (event)=>{
         event.preventDefault();
     }
@@ -32,7 +33,7 @@ function Header(){
         <div className='header'>
         <ImageTagReUse src={MySalonLogo} alt='MySalon-logo' className='logo'/>
          <h2 className='brand-name'>MySalon</h2>
-         <nav className='nav-bar'>
+         <nav className={showNavBar ? 'nav-bar expand': 'nav-bar'}>
            <ul>
             {links.map((link)=>{
                 return(
@@ -43,6 +44,7 @@ function Header(){
             : <ButtonReUse className='myaccount-btn' label='dashboard' onClick={()=>navigate('/mysalon/dashboard')}/> }
            </ul>
          </nav>
+         <ButtonReUse label={<i class="fa-solid fa-bars fa-2xl"></i>} className='header-menu' onClick={()=>{setShowNavBar(!showNavBar)}}/>
        </div>
         </>
     )

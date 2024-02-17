@@ -28,7 +28,6 @@
     display: flex;
     text-align: right;
     margin-left: auto;
-
 }
 
 .nav-bar ul{
@@ -98,6 +97,19 @@
 .myaccount-btn:hover{
     color: #f59f7e;
     background-color: #f8f9fa;
+}
+
+.header-menu{
+    border: none;
+    color: black;
+    background: none;
+    padding: 10px;
+    margin-left: 30px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 25%;
+    right: 25px;
 }
 
 /* <---------- Header-cover-picture -----------> */
@@ -657,7 +669,6 @@
     color: #f59f7e;
 }
 
-
 .copyright{
     bottom: 0;
     left: 0;
@@ -672,3 +683,65 @@
     align-items: center;
     gap: 0.2rem;
 }
+  
+/* <---------- Media-query -----------> */ 
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .header{
+        padding-left: 1rem;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 0;
+    }
+
+    .logo{
+        margin-left: 10px;
+    }
+
+    .brand-name{
+        margin-left: 70px;
+    }
+
+    .nav-bar ul{
+        display: none;
+        top: 66px;
+        left: 0;
+        position: fixed;
+        height: 100%;
+        flex-direction: column;
+        width: 100%;
+        background-color:white;
+        border-top: 1px solid #E9ECEF;
+    }
+
+    .nav-bar ul li{
+        text-align: center;
+        margin: auto;
+        display: block;
+        line-height: 60px;
+    }
+
+    .nav-bar li a{
+        width: 100%;
+        padding: 1.5rem ;
+        padding: 0;
+    }
+
+    .nav-bar.expand ul{
+        display: block;
+
+    }
+
+    .header-menu{
+        display: block;
+    }
+
+    .header-signup-btn{
+        margin-right: 120px;
+    }
+
+    .myaccount-btn{
+        margin-right: 120px;
+    }
+}   

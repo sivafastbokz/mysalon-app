@@ -736,4 +736,29 @@
     .header-menu{
         display: block;
     }
-}   
+
+    .footer{
+        padding-left: 0rem;
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .footer-col-two{
+        margin-left: 10px;
+    }
+
+    .footer-col-three{
+        margin-left: 50px;
+    }
+
+    .footer-address{
+        margin-left: 50px;
+    }
+}
+
+@media only screen and (max-device-width : 398px){
+    .footer{
+        padding-right: 0rem;
+    }
+}

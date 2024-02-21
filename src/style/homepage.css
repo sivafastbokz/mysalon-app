@@ -116,10 +116,11 @@
 
 .image{
     position: relative;
-    width: 100%;
+    max-width: 100%;
     background-image:url('../assets/header-background-2.jpg');
     background-size: cover;
     height: 680px;
+    background-repeat: no-repeat;
 }
 
 .image-text{
@@ -265,7 +266,8 @@
 
 .viewmoreservice-btn{
     margin-top: 100px;
-    margin-left: 670px;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 50px;
     font-size: 16px;
     padding: 10px 15px;
@@ -276,6 +278,7 @@
     border: 1px solid #f59f7e;
     color: white;
     cursor: pointer;
+    display: block;
 }
 
 .viewmoreservice-btn:hover{
@@ -369,6 +372,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    row-gap: 50px;
 }
 
 .testimonial-item{
@@ -413,8 +417,8 @@
     justify-content: center;
     gap: 30px;
     padding-bottom: 100px;
+    flex-wrap: wrap;
 }
-
 
 .contactus-container{
     display: flex;
@@ -754,6 +758,26 @@
     .footer-address{
         margin-left: 50px;
     }
+
+   .image{
+       height: 100vh;
+       background-size: 100% 100%;
+   } 
+
+   .image-text{
+       bottom: 30%;
+       left: 8%;
+       font-size: 35px;
+   }
+
+   .btn-booknow{
+       bottom: 20%;
+       left: 35%;
+   }
+
+   .viewmoreservice-btn{
+       margin-top: 50px;
+   }
 }
 
 @media only screen and (max-device-width : 398px){

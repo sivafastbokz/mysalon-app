@@ -140,7 +140,7 @@
 .btn-booknow{
     position: absolute;
     bottom: 310px;
-    left: 710px;
+    left: 700px;
     border-radius: 50px;
     font-size: 16px;
     padding: 10px 15px;
@@ -777,6 +777,48 @@
 
    .viewmoreservice-btn{
        margin-top: 50px;
+   }
+
+   .contactus-container{
+       padding-left: 0;
+       height: 600px;
+   }
+
+   .contact-title{
+      padding-top: 60px;
+   }
+
+   .contact-subtitle{
+      padding-top: 90px;
+   } 
+
+   .contact-subtitle2{
+       padding-top: 170px;
+   }
+
+   .contact-input-group{
+       top: 240px;
+       padding-right: 0;
+       gap: 20px;
+       /* flex-direction: column;  */
+       align-items: center;
+   }
+
+   .contact-name-input{
+       width: 100%; 
+       max-width: 300px; 
+       /* margin-bottom: 20px; */
+   }
+
+   .contact-input-group textarea {
+       width: 100%; 
+       /* max-width: 100%; */
+       /* height: 150px; */
+   }
+
+   .contact-line{
+      top: 220px;
+      width: -webkit-fill-available;
    }
 }
 

@@ -23,6 +23,11 @@ function SignUpPage(){
     
     const navigate = useNavigate();
     const handleClickShowPassword = () => setShowPassword((show) => !show);
+    
+    const signInPage = (event)=>{
+      event.preventDefault();
+      navigate('/mysalon/signin')
+  }
 
     const CreateAccount = async(event)=>{
         event.preventDefault();
@@ -123,7 +128,7 @@ function SignUpPage(){
               startIcon={<LoginIcon/>}
               onClick={CreateAccount}>Sign Up</Button>
               <Typography style={{marginTop:'10px'}}>
-                Already have an account? <Link href='/mysalon/signin' style={{textDecoration:'none'}}>Sign In</Link>
+                Already have an account? <Link href='/mysalon/signin' onClick={signInPage} style={{textDecoration:'none'}}>Sign In</Link>
               </Typography>
             </Paper>
          </Grid> 

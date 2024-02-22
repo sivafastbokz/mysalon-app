@@ -131,3 +131,21 @@
    letter-spacing: 1px;
    font-weight: 500;
 }
+
+/* <---------- Media-query -----------> */ 
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .about-cover-img{
+        height: 100vh;
+        background-size: 100% 100%;
+    }
+
+    .about-image-text{
+        bottom: 20%;
+        font-size: 45px; 
+    }
+
+    .about-image-subtext{
+        display: none;
+    } 
+}

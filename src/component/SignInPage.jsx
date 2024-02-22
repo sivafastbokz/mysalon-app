@@ -25,6 +25,10 @@ function SignInPage(){
          event.preventDefault();
   };
 
+    const signUpPage = (event)=>{
+    event.preventDefault();
+    navigate('/mysalon/signup')
+}
   const SignIn = async(event)=>{
        event.preventDefault();
        if(!email || !password){
@@ -103,7 +107,7 @@ function SignInPage(){
               startIcon={<LoginIcon/>}
               onClick={SignIn}>Sign Up</Button>
               <Typography style={{marginTop:'10px'}}>
-                Don't have an account? <Link href='/mysalon/signup' style={{textDecoration:'none'}}>Sign Up</Link>
+                Don't have an account? <Link href='/mysalon/signup' onClick={signUpPage} style={{textDecoration:'none'}}>Sign Up</Link>
               </Typography>
             </Paper>
          </Grid>

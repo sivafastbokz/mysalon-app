@@ -11,6 +11,7 @@
     background-image: url('https://firebasestorage.googleapis.com/v0/b/mysalon-5560b.appspot.com/o/servicepageimg.jpeg?alt=media&token=7e25ac2a-93f5-4f9b-a580-15fd5fd8fd23');
     background-size: cover;
     height: 680px;
+    background-repeat: no-repeat;
 }
 
 .service-cover-text{
@@ -106,4 +107,23 @@
     font-family: sans-serif;
     color:#222222;
     font-style: italic;
+}
+
+/* <---------- Media-query -----------> */ 
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .service-cover-img{
+        height: 100vh;
+        background-size: 100% 100%;
+    }
+
+    .service-image-text{
+       bottom: 30%;
+       font-size: 45px; 
+    }
+
+    .service-image-subtext{
+       bottom: 15%;
+       font-size: 35px;
+    }
 }

@@ -717,6 +717,7 @@
         width: 100%;
         background-color:white;
         border-top: 1px solid #E9ECEF;
+        /* right: 5%; */
     }
 
     .nav-bar ul li{
@@ -765,14 +766,18 @@
    } 
 
    .image-text{
-       bottom: 30%;
-       left: 8%;
+       top: 40%;
+       left: 50%;
+       transform: translate(-50%, -50%);
        font-size: 35px;
+       text-align: center;
    }
 
    .btn-booknow{
-       bottom: 20%;
-       left: 35%;
+       top: 80%; 
+       left: 50%;
+       transform: translateX(-50%);
+       bottom: auto;
    }
 
    .viewmoreservice-btn{
@@ -819,6 +824,10 @@
    .contact-line{
       top: 220px;
       width: -webkit-fill-available;
+   }
+
+   .marquee-items{
+      flex: 1 1 35vw;
    }
 }
 

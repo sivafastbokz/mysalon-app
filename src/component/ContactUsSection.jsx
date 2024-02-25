@@ -5,12 +5,12 @@ import ButtonReUse from '../reusecomponent/ButtonReUse';
 import InputReUse from '../reusecomponent/InputReUse';
 import '../style/homepage.css';
 
-
 const inputAttributes = [
     {className:'contact-name-input',placeholder:'Name',type:'text',name:'user_name'},
     {className:'contact-name-input',placeholder:'Phone Number',type:'number',name:'user_phonenumber'},
     {className:'contact-name-input',placeholder:'email',type:'email',name:'user_email'}
 ]
+
 function ContactUsSection(){
     const[successMsg,setSuccessMsg]=useState(false);
     const form = useRef();

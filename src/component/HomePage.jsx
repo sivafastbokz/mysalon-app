@@ -4,7 +4,7 @@ import ButtonReUse from '../reusecomponent/ButtonReUse';
 import HeadingTagReUse from '../reusecomponent/HeadingTagReUse';
 import Header from './Header';
 import ServiceSection from './ServiceSection';
-import ContactUsSection from './ContactUsSection';
+// import ContactUsSection from './ContactUsSection';
 import Footer from './Footer';
 import '../style/homepage.css';
 
@@ -30,12 +30,14 @@ function HomePage(){
         <>
       <Header/>
       <div className='image'>
-       <h3 className='image-text'>
+        <div className='image-text-container'>
+        <h3 className='image-text'>
            Fascinating than any <br/>
              fashion salon
         </h3>
         <ButtonReUse className='btn-booknow' label='Book Now' onClick={servicePage}/>
       </div>
+        </div>
       <div className='salon-intro'>
        {headingTagLabel.map((tag)=>{
         return(
@@ -45,7 +47,7 @@ function HomePage(){
        <ButtonReUse className='knowmore-btn' label='Know More' onClick={aboutUsPage}/>
       </div>
       <ServiceSection/>
-      <ContactUsSection/>
+      {/* <ContactUsSection/> */}
       <Footer/>
         </>
     )

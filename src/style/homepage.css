@@ -116,31 +116,38 @@
 
 .image{
     position: relative;
-    max-width: 100%;
+    width: 100%;
     background-image:url('../assets/header-background-2.jpg');
     background-size: cover;
     height: 680px;
     background-repeat: no-repeat;
 }
 
+.image-text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .image-text{
     position: absolute;
-    z-index: 1;
+    /* z-index: 1; */
     bottom: 350px;
-    left: 500px;
+    /* left: 500px; */
     color: #fff;
     font-family: 'Lobster', cursive;
     letter-spacing: 2px;
     font-size: 55px;
     margin: 20px 0 20px 0;
-    text-align: center;
+    /* text-align: center; */
     font-style: italic;
 }
 
 .btn-booknow{
     position: absolute;
     bottom: 310px;
-    left: 700px;
+    /* left: 700px; */
     border-radius: 50px;
     font-size: 16px;
     padding: 10px 15px;
@@ -148,7 +155,7 @@
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     background-color: transparent;
-    text-align: center;
+    /* text-align: center; */
     border-width: 1px;
     color: #f59f7e;
     border-color: #f59f7e;
@@ -345,7 +352,7 @@
 }
 
 .marquee-items{
-    flex: 0 0 16vw;
+    flex: 1 1 16vw;
 }
 
 .marquee-image{
@@ -763,7 +770,7 @@
    .image{
        height: 100vh;
        background-size: 100% 100%;
-   } 
+    } 
 
    .image-text{
        top: 40%;
@@ -771,14 +778,14 @@
        transform: translate(-50%, -50%);
        font-size: 35px;
        text-align: center;
-   }
+    }
 
    .btn-booknow{
-       top: 80%; 
+       top: 83%; 
        left: 50%;
        transform: translateX(-50%);
        bottom: auto;
-   }
+    }
 
    .viewmoreservice-btn{
        margin-top: 50px;
@@ -901,6 +908,30 @@
     .footer-address{
         margin-left: 50px;
     }
+
+    .marquee-items{
+        flex: 1 1 26vw;
+    }
+
+    .image{
+        height: 100vh;
+        background-size: 100% 100%;
+    } 
+
+    .image-text{
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 35px;
+        text-align: center;
+    }
+ 
+    .btn-booknow{
+        top: 80%; 
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: auto;
+    }
 }
 
 @media screen and (min-width:601px) and (max-width:852px) {
@@ -972,6 +1003,39 @@
     .footer-address{
         margin-left: 50px;
     }
+
+    .marquee-items{
+        flex: 1 1 25vw;
+    }
+
+    .image{
+        height: 100vh;
+        background-size: 100% 100%;
+    } 
+
+    .image-text{
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 35px;
+        text-align: center;
+    }
+ 
+    .btn-booknow{
+        top: 80%; 
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: auto;
+    }
+}
+
+@media screen and (min-width:699px) and (max-width:852px) {
+    .btn-booknow{
+        top: 65%; 
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: auto;
+    }
 }
 
 @media screen and (min-width:853px) and (max-width:1024px) {
@@ -1010,6 +1074,11 @@
     .footer-address{
         margin-left: 40px;
     }
+    
+    .marquee-items{
+        flex: 1 1 21vw;
+    }
+
 }
 
 @media screen and (min-width:1025px) and (max-width:1171px) {
@@ -1039,6 +1108,10 @@
 
     .footer-address{
         margin-left: 50px;
+    }
+
+    .marquee-items{
+        flex: 1 1 21vw;
     }
 }
 

@@ -4,7 +4,7 @@ import ButtonReUse from '../reusecomponent/ButtonReUse';
 import HeadingTagReUse from '../reusecomponent/HeadingTagReUse';
 import Header from './Header';
 import ServiceSection from './ServiceSection';
-// import ContactUsSection from './ContactUsSection';
+import ContactUsSection from './ContactUsSection';
 import Footer from './Footer';
 import '../style/homepage.css';
 
@@ -47,7 +47,7 @@ function HomePage(){
        <ButtonReUse className='knowmore-btn' label='Know More' onClick={aboutUsPage}/>
       </div>
       <ServiceSection/>
-      {/* <ContactUsSection/> */}
+      <ContactUsSection/>
       <Footer/>
         </>
     )

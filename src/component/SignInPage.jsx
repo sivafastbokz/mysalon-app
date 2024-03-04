@@ -56,7 +56,7 @@ function SignInPage(){
     return(
         <>
         {successMsg ? 
-        <Alert variant='filled' severity='success' style={{width:'30%',margin:'auto',marginTop:'20px'}}>
+        <Alert variant='filled' severity='success' style={{width:'100%',maxWidth:'360px',margin:'auto',marginTop:'20px'}}>
          Login Successfull</Alert>
         : ''}
          <Grid>

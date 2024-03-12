@@ -22,14 +22,8 @@ function Routers(){
                 <Route path='/mysalon/dashboard' element={<Dashboard/>}></Route>
             </Routes>
          </Router>
-
         </>
     )
 }
 
 export default Routers;
-
-
-
-
-

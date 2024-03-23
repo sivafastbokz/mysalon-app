@@ -53,7 +53,7 @@ function ServiceSection(){
 
     const servicePage = (event)=>{
        event.preventDefault();
-       navigate('/mysalon/service')
+       navigate('/mysalon/service');
     }
 
     return(

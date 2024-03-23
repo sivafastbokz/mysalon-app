@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import getServiceDetails from '../service/ServiceDetails';
-import ButttonReuse from './ButtonReUse'
+import ButttonReuse from './ButtonReUse';
 import '../style/homepage.css';
 
 function ServiceCard(){

@@ -7,12 +7,12 @@ import Footer from './Footer';
 import '../style/dashboardpage.css';
 
 const columns = [
-    { field: '_id', headerName: 'ID', width: 130 },
-    { field: 'bookingName', headerName: 'Service Name', width: 130 },
-    { field: 'bookingDate', headerName: 'Service Date', width: 130 },
-    { field: 'bookingTime', headerName: 'Service Time', width: 130},
-    { field: 'bookedDate', headerName: 'Booked Date', width: 130},
-    { field: 'Action', headerName: 'Action', width: 130},
+    { field: '_id', headerName: 'ID', width: 130,editable: true },
+    { field: 'bookingName', headerName: 'Service Name', width: 130,editable: true },
+    { field: 'bookingDate', headerName: 'Service Date', width: 130,editable: true },
+    { field: 'bookingTime', headerName: 'Service Time', width: 130,editable: true},
+    { field: 'bookedDate', headerName: 'Booked Date', width: 130,editable: true},
+    { field: 'Action', headerName: 'Action', width: 130,editable: true},
   ];
    
 function DashboardPage(){
